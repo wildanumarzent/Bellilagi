@@ -1,0 +1,7 @@
+.c-input {
+  @apply input bg-base-300 mt-1 focus:outline-primary block w-full shadow-sm sm:text-sm rounded-md;
+}
+
+.c-section-title {
+  @apply pb-2 mb-4 border-b border-base-content font-bold;
+}

@@ -1,0 +1,15 @@
+// vendors
+@import './vendors/_tailwind';
+
+// themes
+@import './themes/daikin';
+
+// base
+@import './base/_reset';
+@import './base/_custom';
+
+
+// components
+
+// pages
+@import './pages/home.scss';
