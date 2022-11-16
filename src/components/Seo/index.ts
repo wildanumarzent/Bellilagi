@@ -1,5 +1,5 @@
-import Seo from './seo'
+import Seo from './Seo';
 
-export {default} from './defaultSeo'
+export { default } from './DefaultSeo';
 
-export {Seo}
+export { Seo };

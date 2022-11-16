@@ -26,3 +26,14 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Yarn Berry
+# LINK: https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+.yarn/*
+.yarn/cache
+.yarn/install-state.gz
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

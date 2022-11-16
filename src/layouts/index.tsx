@@ -1,20 +1,20 @@
-import dynamic from "next/dynamic";
-import useLayout from "@/hooks/useLayout.next";
+import dynamic from 'next/dynamic';
 
-const Fullscreen = dynamic(() => import("@/layouts/Fullscreen"));
-const Main = dynamic(() => import("@/layouts/Main"));
+import useLayout from '@/hooks/useLayout.next';
 
-export default function SiteLayout({children}: React.PropsWithChildren<{}>) {
-  const {layout} = useLayout();
+const Fullscreen = dynamic(() => import('@/layouts/Fullscreen'));
+const Main = dynamic(() => import('@/layouts/Main'));
+
+export default function SiteLayout({ children }: React.PropsWithChildren) {
+  const { layout } = useLayout();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const MAP_LAYOUT: Record<string, any> = {
     fullscreen: Fullscreen,
     default: Main,
   };
-  const Component = MAP_LAYOUT[layout ?? "default"];
+  const Component = MAP_LAYOUT[layout ?? 'default'];
 
   return <Component layout={layout}>{children}</Component>;
 }
 
-export const getLayout = (page: React.ReactElement) => (
-  <SiteLayout>{page}</SiteLayout>
-);
+export const getLayout = (page: React.ReactElement) => <SiteLayout>{page}</SiteLayout>;

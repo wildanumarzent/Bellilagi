@@ -1,7 +1,8 @@
-import React from "react";
-import type {PagePropsWithChildren} from "@/types/pages";
+import React from 'react';
 
-const Fullscreen = ({children}: PagePropsWithChildren) => {
+import type { PagePropsWithChildren } from '@/types/pages';
+
+const Fullscreen = ({ children }: PagePropsWithChildren) => {
   return <div className="w-full min-h-screen">{children}</div>;
 };
 

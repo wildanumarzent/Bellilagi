@@ -1,10 +1,12 @@
 export const EXAMPLE = '';
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const APP: Record<string, any> = {
-  name: 'Nextjs Boilerplate',
+  name: 'Subway',
   description: '',
   currencyCode: 'IDR',
   logo: null,
-}
+};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const GENERAL: Record<string, any> = {
   siteTitle: APP.name,
   siteSubtitle: APP.description,
@@ -15,8 +17,8 @@ export const GENERAL: Record<string, any> = {
     original: APP.logo,
   },
   seo: {
-    metaTitle: 'Nextjs Boilerplate',
-    metaDescription: 'Nextjs Boilerplate',
+    metaTitle: 'Apps',
+    metaDescription: '',
     ogTitle: '',
     ogDescription: '',
     ogImage: {
@@ -28,5 +30,5 @@ export const GENERAL: Record<string, any> = {
     twitterCardType: '',
     metaTags: '',
     canonicalUrl: '',
-  }
-}
+  },
+};

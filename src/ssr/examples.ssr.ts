@@ -1,15 +1,13 @@
+import type { GetStaticPaths, GetStaticProps } from 'next';
 
 import { PageProps } from '@/types/pages';
-import type { GetStaticPaths, GetStaticProps } from 'next';
 
 type ParsedQueryParams = {
   pages: string[];
 };
 
 // This function gets called at build time
-export const getStaticPaths: GetStaticPaths<ParsedQueryParams> = async ({
-  locales,
-}) => {
+export const getStaticPaths: GetStaticPaths<ParsedQueryParams> = async () => {
   // We'll pre-render only these paths at build time also with the slash route.
   return {
     paths: [{ params: { pages: [] } }],
@@ -17,14 +15,11 @@ export const getStaticPaths: GetStaticPaths<ParsedQueryParams> = async ({
   };
 };
 
-export const getStaticProps: GetStaticProps<
-  PageProps,
-  ParsedQueryParams
-> = async ({ locale, params }) => {
+export const getStaticProps: GetStaticProps<PageProps, ParsedQueryParams> = async () => {
   return {
     props: {
       variables: {},
-      layout: ''
+      layout: '',
     },
     revalidate: 120,
   };

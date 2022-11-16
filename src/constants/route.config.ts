@@ -1,6 +1,6 @@
-import {
-    HomeIcon,
-} from "@heroicons/react/outline";
+import { HomeIcon } from '@heroicons/react/24/outline';
+
+import { DisplayOn, Layout, TypeRouterConfig } from '@/types/general';
 
 // Example ROUTE_CONFIG Object
 // {
@@ -19,154 +19,56 @@ import {
 //   soon: false,
 // }
 
-const ROUTE_CONFIG = [
-    {
-        id: "home",
-        title: "Home",
-        path: "/",
-        index: true,
-        exact: true,
-        layout: 'default',
-        layoutGroup: 'home',
-        icon: HomeIcon,
-        current: false,
-        displayOn: ["sidemenu"],
-        soon: false,
-    },
-    {
-        id: "solutions",
-        title: "Solutions",
-        path: '/solutions',
-        exact: true,
-        layout: 'default',
-        icon: HomeIcon,
-        current: false,
-        displayOn: ["mainmenu", "sidemenu"],
-        soon: false,
-        children: [
-            {
-                id: "analytics",
-                title: "Analytics",
-                description: "Get a better understanding of where your traffic is coming from.",
-                path: '/analytics',
-                exact: true,
-                layout: 'default',
-                current: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-            {
-                id: "engagement",
-                title: "Engagement",
-                description: "Speak directly to your customers in a more meaningful way.",
-                path: "engagement",
-                isDefault: false,
-                soon: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-            {
-                id: "security",
-                title: "Security",
-                description: "Your customers' data will be safe and secure.",
-                path: "/security",
-                isDefault: false,
-                soon: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-            {
-                id: "automations",
-                title: "Automations",
-                description: "Build strategic funnels that will drive your customers to convert",
-                path: "/automations",
-                isDefault: false,
-                soon: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-            {
-                id: "reports",
-                title: "Reports",
-                description: "Get detailed reports that will help you make more informed decisions.",
-                path: "/reports",
-                isDefault: false,
-                soon: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-        ],
-    },
-    {
-        id: "pricing",
-        title: "Pricing",
-        path: '/pricing',
-        exact: true,
-        layout: 'default',
-        icon: HomeIcon,
-        current: false,
-        displayOn: ["mainmenu", "sidemenu"],
-        soon: false,
-        children: [],
-    },
-    {
-        id: "docs",
-        title: "Docs",
-        path: '/docs',
-        exact: true,
-        layout: 'default',
-        icon: HomeIcon,
-        current: false,
-        displayOn: ["mainmenu", "sidemenu"],
-        soon: false,
-        children: [],
-    },
-    {
-        id: "more",
-        title: "More",
-        path: '/more',
-        exact: true,
-        layout: 'default',
-        icon: HomeIcon,
-        current: false,
-        displayOn: ["mainmenu", "sidemenu"],
-        soon: false,
-        children: [
-            {
-                id: "help-center",
-                title: "Help Center",
-                description: "Get all of your questions answered in our forums or contact support.",
-                path: '/help-center',
-                exact: true,
-                layout: 'default',
-                current: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-            {
-                id: "guides",
-                title: "Guides",
-                description: "Learn how to maximize our platform to get the most out of it.",
-                path: '/guides',
-                exact: true,
-                layout: 'default',
-                current: false,
-                displayOn: ["mainmenu", "sidemenu"],
-                children: [],
-            },
-        ],
-    },
-    // Misc Pages
-    {
-        id: "not-found",
-        title: "Not Found",
-        path: '/not-found',
-        exact: true,
-        layout: 'fullscreen',
-        current: false,
-        displayOn: [],
-        children: [],
-    },
-]
+const ROUTE_CONFIG: TypeRouterConfig[] = [
+  {
+    id: 'home',
+    title: 'Subway',
+    path: '/',
+    layout: Layout.DEFAULT,
+    displayOn: [DisplayOn.MAIN_MENU],
+  },
+  {
+    id: 'solutions',
+    title: 'Solutions',
+    path: '/solutions',
+    layout: Layout.DEFAULT,
+    icon: HomeIcon,
+    displayOn: [DisplayOn.SIDE_MENU, DisplayOn.MAIN_MENU],
+    children: [
+      {
+        id: 'analytics',
+        title: 'Analytics',
+        path: '/solutions/analytics',
+        layout: Layout.DEFAULT,
+        displayOn: [DisplayOn.SIDE_MENU, DisplayOn.MAIN_MENU],
+      },
+      {
+        id: 'engagement',
+        title: 'Engagement',
+        path: '/solutions/engagement',
+        layout: Layout.DEFAULT,
+        displayOn: [DisplayOn.SIDE_MENU, DisplayOn.MAIN_MENU],
+      },
+    ],
+  },
+  {
+    id: 'pricing',
+    title: 'Pricing',
+    path: '/pricing',
+    layout: Layout.DEFAULT,
+    icon: HomeIcon,
+    displayOn: [DisplayOn.SIDE_MENU, DisplayOn.MAIN_MENU],
+    children: [],
+  },
+  // Misc Pages
+  {
+    id: 'not-found',
+    title: 'Not Found',
+    path: '/not-found',
+    layout: Layout.FULLSCREEN,
+    displayOn: [],
+    children: [],
+  },
+];
 
-export default ROUTE_CONFIG
+export default ROUTE_CONFIG;

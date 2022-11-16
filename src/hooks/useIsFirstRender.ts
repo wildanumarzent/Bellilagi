@@ -1,7 +1,10 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 
-{/* How to Use */}
-{/*
+{
+  /* How to Use */
+}
+{
+  /*
   const isFirst = useIsFirstRender()
   const [data, setData] = useState<number>(0)
 
@@ -16,18 +19,19 @@ import { useRef } from 'react'
       <button onClick={() => setData(Date.now())}>Update data</button>
     </div>
   )
-*/}
-
-const useIsFirstRender = (): boolean => {
-  const isFirst = useRef(true)
-
-  if (isFirst.current) {
-    isFirst.current = false
-
-    return true
-  }
-
-  return isFirst.current
+*/
 }
 
-export default useIsFirstRender
+const useIsFirstRender = (): boolean => {
+  const isFirst = useRef(true);
+
+  if (isFirst.current) {
+    isFirst.current = false;
+
+    return true;
+  }
+
+  return isFirst.current;
+};
+
+export default useIsFirstRender;
