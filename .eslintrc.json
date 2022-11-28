@@ -8,8 +8,8 @@
     "eslint:recommended",
     "plugin:import/typescript",
     "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
+    "next",
+    "prettier"
   ],
   "globals": {
     "Atomics": "readonly",
@@ -19,11 +19,12 @@
   "plugins": [
     "import",
     "import-order-alphabetical",
-    "react-native-a11y",
+    "react",
     "react-hooks"
   ],
   "rules": {
-    // eslint-plugin-import
+    // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
+    "react/react-in-jsx-scope": "off",
     "import/first": 1,
     "import/newline-after-import": 1,
     "import/no-cycle": 2,
@@ -31,45 +32,33 @@
     "import/no-unresolved": 2,
     "import/no-unused-modules": 1,
 
-    // eslint-plugin-import-order-alphabetical
-    "import-order-alphabetical/order": 1,
-
     // eslint-plugin-prettier
     "prettier/prettier": 0,
 
     // eslint-plugin-react
     "react/prop-types": 0,
 
-    // eslint-plugin-react-native
-    "react-native/no-color-literals": 1,
-    "react-native/no-inline-styles": 1,
-    "react-native/no-single-element-style-arrays": 1,
-    "react-native/no-unused-styles": 1,
-
     // eslint-plugin-react-hooks
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+
   },
   "overrides": [
     {
       "extends": [
         "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
-        "prettier/@typescript-eslint"
+        "plugin:@typescript-eslint/recommended"
       ],
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "plugins": ["@typescript-eslint/eslint-plugin"],
       "rules": {
-        "@typescript-eslint/explicit-function-return-type": [
-          1,
-          {"allowExpressions": true, "allowTypedFunctionExpressions": true}
-        ],
         "@typescript-eslint/explicit-module-boundary-types": 0,
         "@typescript-eslint/no-empty-interface": 1,
         "@typescript-eslint/no-unused-vars": [1, {"argsIgnorePattern": "^_"}],
         "@typescript-eslint/no-use-before-define": 0,
-        "no-unused-vars": 1
+        "no-unused-vars": 1,
+        "@next/next/no-img-element": "off"
       }
     }
   ]
