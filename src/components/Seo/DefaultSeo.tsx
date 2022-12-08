@@ -1,5 +1,6 @@
-import { GENERAL } from "@/constants/sites.settings";
-import { DefaultSeo as NextDefaultSeo } from "next-seo";
+import { DefaultSeo as NextDefaultSeo } from 'next-seo';
+
+import { GENERAL } from '@/constants/sites.settings';
 
 const DefaultSeo = () => {
   const settings = GENERAL;
@@ -7,40 +8,38 @@ const DefaultSeo = () => {
     <NextDefaultSeo
       additionalMetaTags={[
         {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1 maximum-scale=1",
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1 maximum-scale=1',
         },
         {
-          name: "apple-mobile-web-app-capable",
-          content: "yes",
+          name: 'apple-mobile-web-app-capable',
+          content: 'yes',
         },
         {
-          name: "theme-color",
-          content: "#ffffff",
+          name: 'theme-color',
+          content: '#ffffff',
         },
       ]}
       additionalLinkTags={[
         {
-          rel: "apple-touch-icon",
-          href: "icons/apple-icon-180.png",
+          rel: 'apple-touch-icon',
+          href: 'icons/apple-icon-180.png',
         },
         {
-          rel: "manifest",
-          href: "/manifest.json",
+          rel: 'manifest',
+          href: '/manifest.json',
         },
       ]}
       title={settings?.seo?.metaTitle}
-      titleTemplate={`${
-        settings?.seo?.metaTitle || settings?.siteTitle || "E-Commerce"
-      } | %s`}
+      titleTemplate={`${settings?.siteTitle || settings?.seo?.metaTitle || 'E-Commerce'} | %s`}
       defaultTitle="Freelance Finder"
       description={settings?.seo?.metaDescription || settings?.siteSubtitle}
       canonical={settings?.seo?.canonicalUrl}
       openGraph={{
         title: settings?.seo?.ogTitle,
         description: settings?.seo?.ogDescription,
-        type: "website",
-        locale: "en_US",
+        type: 'website',
+        locale: 'en_US',
         site_name: settings?.siteTitle,
         images: [
           {

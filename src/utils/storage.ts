@@ -10,7 +10,7 @@ const storage = {
   clearToken: () => {
     window.localStorage.removeItem(`${storagePrefix}token`);
   },
-  getTheme: () => typeof window !== "undefined" ? window.localStorage.getItem('theme') : null
+  getTheme: () => (typeof window !== 'undefined' ? window.localStorage.getItem('theme') : null),
 };
 
 export default storage;

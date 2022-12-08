@@ -1,6 +1,8 @@
 import { NextSeo, NextSeoProps } from 'next-seo';
+
 interface SeoProps extends NextSeoProps {
   url?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   images?: any[] | null;
 }
 const Seo = ({ title, description, images, url, ...props }: SeoProps) => {

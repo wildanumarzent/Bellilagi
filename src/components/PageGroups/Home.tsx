@@ -1,6 +1,8 @@
-import React from "react";
+/* eslint-disable @next/next/no-img-element */
+import React from 'react';
+
 // Components
-import PricingSection from "../PageSections/Pricing";
+import PricingSection from '../PageSections/Pricing';
 // type
 
 const Home = () => {
@@ -15,8 +17,7 @@ const Home = () => {
                 width={404}
                 height={784}
                 fill="none"
-                viewBox="0 0 404 784"
-              >
+                viewBox="0 0 404 784">
                 <defs>
                   <pattern
                     id="e229dbec-10e9-49ee-8ec3-0286ca089edf"
@@ -24,8 +25,7 @@ const Home = () => {
                     y={0}
                     width={20}
                     height={20}
-                    patternUnits="userSpaceOnUse"
-                  >
+                    patternUnits="userSpaceOnUse">
                     <rect
                       x={0}
                       y={0}
@@ -36,19 +36,14 @@ const Home = () => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={784}
-                  fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)"
-                />
+                <rect width={404} height={784} fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
               </svg>
               <svg
                 className="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4"
                 width={404}
                 height={784}
                 fill="none"
-                viewBox="0 0 404 784"
-              >
+                viewBox="0 0 404 784">
                 <defs>
                   <pattern
                     id="d2a68204-c383-44b1-b99f-42ccff4e5365"
@@ -56,8 +51,7 @@ const Home = () => {
                     y={0}
                     width={20}
                     height={20}
-                    patternUnits="userSpaceOnUse"
-                  >
+                    patternUnits="userSpaceOnUse">
                     <rect
                       x={0}
                       y={0}
@@ -68,11 +62,7 @@ const Home = () => {
                     />
                   </pattern>
                 </defs>
-                <rect
-                  width={404}
-                  height={784}
-                  fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"
-                />
+                <rect width={404} height={784} fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
               </svg>
             </div>
           </div>
@@ -85,9 +75,8 @@ const Home = () => {
                   <span className="block text-base-300">online business</span>
                 </h1>
                 <p className="mt-3 max-w-md mx-auto sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure
-                  qui lorem cupidatat commodo. Elit sunt amet fugiat veniam
-                  occaecat fugiat aliqua.
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat
+                  commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
                 </p>
               </div>
             </div>
@@ -157,16 +146,13 @@ const Home = () => {
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
             <span className="block">Ready to dive in?</span>
-            <span className="block text-base-100">
-              Start your free trial today.
-            </span>
+            <span className="block text-base-100">Start your free trial today.</span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <a
                 href="#"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent font-medium rounded-md bg-secondary hover:bg-secondary-focus hover:text-white"
-              >
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent font-medium rounded-md bg-secondary hover:bg-secondary-focus hover:text-white">
                 Get started
               </a>
             </div>

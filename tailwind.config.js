@@ -15,7 +15,7 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        daikin: {
+        subway: {
           primary: '#00A0E4',
           secondary: '#6AC5EF',
           accent: '#97d159',

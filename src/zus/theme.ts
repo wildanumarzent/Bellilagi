@@ -1,4 +1,4 @@
-import create from 'zustand'
+import create from 'zustand';
 
 interface ThemeState {
   theme: string;
@@ -12,9 +12,9 @@ const useThemeStore = create<ThemeState>((set) => ({
   isDarkmode: true,
   setTheme: (val: string) => {
     // set(() => ({ theme: val }))
-    set({ theme: val, isDarkmode: val === "dracula" })
+    set({ theme: val, isDarkmode: val === 'dracula' });
   },
   reset: () => set({ theme: 'dracula' }),
-}))
+}));
 
-export default useThemeStore
+export default useThemeStore;

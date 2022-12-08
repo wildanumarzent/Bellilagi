@@ -1,13 +1,7 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from "next/document";
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 
-function getDirection(language: string | undefined) {
-  return "ltr";
+function getDirection() {
+  return 'ltr';
 }
 
 export default class CustomDocument extends Document {
@@ -15,8 +9,7 @@ export default class CustomDocument extends Document {
     return Document.getInitialProps(ctx);
   }
   render() {
-    const { locale } = this.props.__NEXT_DATA__;
-    const dir = getDirection(locale);
+    const dir = getDirection();
     return (
       <Html data-theme="garden">
         <Head>
