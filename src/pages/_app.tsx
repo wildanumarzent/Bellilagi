@@ -12,7 +12,7 @@ import DefaultSeo from '@/components/Seo';
 import type { NextPageWithLayout } from '@/types/pages';
 import { pageview } from '@/utils/gtag';
 import storage from '@/utils/storage';
-import useTheme from '@/zus/theme';
+import useTheme from '@/store/theme';
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;

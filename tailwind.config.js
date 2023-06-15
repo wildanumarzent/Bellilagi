@@ -15,9 +15,9 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        subway: {
-          primary: '#00A0E4',
-          secondary: '#6AC5EF',
+        meteorcommerce: {
+          primary: '#2583BA',
+          secondary: '#B0B0B0',
           accent: '#97d159',
           neutral: '#262438',
           'base-100': '#FFFFFF',

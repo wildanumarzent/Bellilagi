@@ -22,7 +22,7 @@ import { DisplayOn, Layout, TypeRouterConfig } from '@/types/general';
 const ROUTE_CONFIG: TypeRouterConfig[] = [
   {
     id: 'home',
-    title: 'Subway',
+    title: 'GoodNews',
     path: '/',
     layout: Layout.DEFAULT,
     displayOn: [DisplayOn.MAIN_MENU],

@@ -1,6 +1,6 @@
 {
-    "name": "Subway",
-    "short_name": "Subway",
+    "name": "GoodNews",
+    "short_name": "GoodNews",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#90cdf4",

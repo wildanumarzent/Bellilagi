@@ -1,7 +1,7 @@
 export const EXAMPLE = '';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const APP: Record<string, any> = {
-  name: 'Subway',
+  name: 'GoodNews',
   description: '',
   currencyCode: 'IDR',
   logo: null,
