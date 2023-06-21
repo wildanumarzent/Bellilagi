@@ -1,0 +1,571 @@
+{
+  "products": [
+    {
+      "title": "Elegant Frozen Soap",
+      "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/9/14/9aa25825-75c3-46d6-834b-1e661d539830.jpg",
+      "sold": 100,
+      "ratting": 4.2,
+      "total_ratting": 97,
+      "price": 120000,
+      "special_price": 101000,
+      "discount": 15,
+      "city": "Bandung",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "1"
+    },
+    {
+      "title": "Electronic Fresh Hat",
+      "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg",
+      "sold": 9,
+      "ratting": 4.1,
+      "total_ratting": 96,
+      "price": 130000,
+      "special_price": 102000,
+      "discount": 16,
+      "city": "Jakarta",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
+      "id": "2"
+    },
+    {
+      "title": "Handcrafted Rubber Chicken",
+      "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680",
+      "ratting": 4.3,
+      "total_ratting": 95,
+      "price": 140000,
+      "special_price": 104000,
+      "discount": 17,
+      "city": "Jakarta selatan",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "id": "3"
+    },
+    {
+      "title": "Electronic Cotton Chicken",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/11/21/00a17b50-a782-42b9-8d54-1686c65da41f.jpg",
+      "sold": 70,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 140000,
+      "special_price": 105000,
+      "discount": 16,
+      "city": "Tangerang",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "id": "4"
+    },
+    {
+      "title": "Gorgeous Bronze Sausages",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg",
+      "sold": 60,
+      "ratting": 3.4,
+      "total_ratting": 95,
+      "price": 160000,
+      "special_price": 103000,
+      "discount": 16,
+      "city": "Tangerang selatan",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "5"
+    },
+    {
+      "title": "Refined Concrete Shirt",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/7/16/e0cf8e5f-85dc-4705-a1d5-5943232646b8.jpg",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "purwakarta",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "6"
+    },
+    {
+      "title": "Rustic Concrete Pizza",
+      "image": "https://images.tokopedia.net/img/cache/200-square/product-1/2020/2/22/28566590/28566590_f696d6b3-5f6e-4d47-9154-55dbe3b8f5ed_680_680",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Medan",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "id": "7"
+    },
+    {
+      "title": "Intelligent Rubber Car",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/3/26/91543ac1-0123-475c-8b89-8b3704c70df6.jpg",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Jawa tengah",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "id": "8"
+    },
+    {
+      "title": "Awesome Fresh Bike",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/3/1/26a2482d-a40a-4b17-b3d1-1606bf9d25fb.jpg",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Jawa timur",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "id": "9"
+    },
+    {
+      "title": "Practical Concrete Shoes",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2022/1/26/4ebbc256-224d-4f48-9773-91b086e285c2.jpg",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Malang",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "id": "10"
+    },
+    {
+      "title": "Small Cotton Pizza",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/12/22/ea164038-9181-4483-8686-11d9337bb24f.jpg",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Bekasi",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "id": "11"
+    },
+    {
+      "title": "Bespoke Metal Soap",
+      "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/1/12/f0346479-366c-49a0-8e7d-a8c168c783c5.png",
+      "sold": 50,
+      "ratting": 4.4,
+      "total_ratting": 95,
+      "price": 170000,
+      "special_price": 107000,
+      "discount": 16,
+      "city": "Banjaran",
+      "variant_color": [
+        {
+          "id": 1,
+          "title": "putih",
+          "image": "https://images.tokopedia.net/img/cache/300-square/VqbcmM/2022/12/19/0f1a3a93-3abf-4738-872e-3f661f247e6b.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Hitam",
+          "image": "https://images.tokopedia.net/img/cache/300-square/product-1/2020/2/22/28566590/28566590_a600b715-ee8f-4fa9-9112-063c8fde33e6_680_680"
+        },
+        {
+          "id": 3,
+          "title": "Merah",
+          "image": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2021/8/5/714b0eb5-ccde-45bb-ab15-4a7bfc805ac0.jpg"
+        }
+      ],
+      "variant_size": [
+        {
+          "id": 1,
+          "title": "M"
+        },
+        {
+          "id": 2,
+          "title": "L"
+        },
+        {
+          "id": 3,
+          "title": "XL"
+        }
+      ],
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "id": "12"
+    }
+  ],
+  "categories": [
+    {
+      "image": "https://images.tokopedia.net/img/cache/100-square/iEWsxH/2021/10/5/461aa510-5537-41b7-92d4-684d39c9930e.png",
+      "title": "Kategori"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/100-square/iEWsxH/2023/4/27/4b81a081-0f97-4b9d-9ee1-8be5c938b14d.png",
+      "title": "Handphone & Tablet"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/100-square/iEWsxH/2021/10/5/75f2fb8a-a4ca-4cd6-a166-7279daef1d5b.png",
+      "title": "Top-Up & Tagihan"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/100-square/iEWsxH/2021/10/6/b5af3e8e-bc2e-48b4-8d00-6d49ec8f4d50.png",
+      "title": "Travel & Entertainment"
+    }
+  ],
+  "categoryImage": [
+    {
+      "image": "https://images.tokopedia.net/img/cache/200-square/attachment/2018/8/9/3127195/3127195_76d08c44-8194-4454-9fb0-1e7a64b656aa.jpg.webp"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/200-square/attachment/2018/8/9/3127195/3127195_cfe03d9c-d79f-4327-8247-458429e1b116.jpg.webp"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/200-square/attachment/2018/8/9/3127195/3127195_d7c67b76-9ff4-46f9-93a3-ec4be4918439.jpg.webp"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/200-square/attachment/2018/8/9/3127195/3127195_e5b3e074-c897-4cf0-9ced-5572d0538e7c.jpg.webp"
+    }
+  ],
+  "banners": [
+    {
+      "image": "https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/6/12/2fab26e0-be73-4ab5-8f36-f3ddcb2cc9d2.jpg.webp?ect=4g"
+    },
+    {
+      "image": "https://images.tokopedia.net/img/cache/1208/NsjrJu/2023/6/14/34924d6e-4c9c-4413-a8dc-2b2b783bb231.jpg.webp?ect=4g"
+    }
+  ]
+}

@@ -9,13 +9,13 @@ const ProductList = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-5 mt-3">
-      <div className="flex justify-center space-x-5">
-        {products.map((product) => (
-          <ProductCard product={product} />
-        ))}
-      </div>
+    // <div className="bg-white rounded-lg shadow-lg py-9 px-10 mt-3">
+    <div className="flex flex-wrap justify-start gap-5 py-9">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
+    // </div>
   );
 };
 
