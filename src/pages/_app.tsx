@@ -6,7 +6,8 @@ import { useRouter } from 'next/router';
 //
 import { ReactElement, useEffect } from 'react';
 import { themeChange } from 'theme-change';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // Components
 import DefaultSeo from '@/components/Seo';
 import type { NextPageWithLayout } from '@/types/pages';
@@ -55,6 +56,18 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
     <>
       <DefaultSeo />
       {getLayout(<Component {...pageProps} />)}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </>
   );
 }

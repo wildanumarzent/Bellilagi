@@ -1,20 +1,16 @@
-import useCategeries from '@/store/categories';
 import ServiceCard from './component/ServiceCard';
 import CategoryCard from './component/CategoryCard';
-import { useEffect } from 'react';
-
+import TabTopup from './component/TabTopup';
 const Category = () => {
-
   return (
     <div className="bg-white flex flex-col justify-start border mt-3 rounded-lg shadow-md">
-      <div className="flex">
-          <CategoryCard />
-        <div className="p-5">
-          <span className="text-3xl">Top Up & Tagihan</span>
-          <div></div>
-        </div>
+      <div className=" hidden lg:flex">
+        <CategoryCard />
+        <TabTopup />
       </div>
-        <ServiceCard /> 
+      <div className="pr-16">
+        <ServiceCard />
+      </div>
     </div>
   );
 };

@@ -1,45 +1,37 @@
 import Textfield from '@/components/atoms/input/Textfield';
 import Button from '@/components/atoms/button/button';
+import useAuth from '@/store/auth';
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
 
-interface SignUpFormInterface {
-  name: string;
-  email: string;
-  password: string;
-}
-
 const Signup = () => {
   const [loading, setLoading] = useState(false);
-
+  const { Register } = useAuth();
   const formik = useFormik({
     initialValues: {
-      name: '',
       email: '',
       password: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Name is required'),
       email: Yup.string().email('Invalid email address').required('Email is required'),
       password: Yup.string()
         .min(6, 'Password must be at least 6 characters')
         .required('Password is required'),
     }),
-    onSubmit: (values: SignUpFormInterface) => {
+    onSubmit: async (values: IUser) => {
       setLoading(true);
-      setTimeout(() => {
+      setTimeout(async () => {
         setLoading(false);
+        await Register(values);
         formik.setSubmitting(false);
         formik.resetForm();
-        console.log(values);
       }, 2000);
     },
   });
-  console.log(formik);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="relative bg-white min-h-screen">
       <div className="flex justify-center items-center pt-5">
         <img
           src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/581fca3a.png"
@@ -71,16 +63,6 @@ const Signup = () => {
             </div>
 
             <form className="space-y-2" onSubmit={formik.handleSubmit} method="POST">
-              <Textfield
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                error={!!formik.touched.name && !!formik.errors.name}
-                errorText={formik.errors.name}
-                type="text"
-                label="Name"
-                name="name"
-                placeholder="Masukan Email"
-              />
               <Textfield
                 value={formik.values.email}
                 onChange={formik.handleChange}
@@ -119,7 +101,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
-      <div className="relative bottom-2 text-gray-500 text-center text-sm">
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 text-center text-sm">
         © 2009-2023, PT Tokopedia <strong className="text-success">Tokopedia Care</strong>
       </div>
     </div>

@@ -7,7 +7,7 @@ import ProductList from '../PageSections/products';
 
 const Home = () => {
   return (
-    <div className='mx-auto max-w-7xl px-10 py-5'>
+    <div className="mx-auto max-w-7xl xl:px-10 px-3 py-5">
       <BannerContent />
       <Category />
       <ProductList />

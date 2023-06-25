@@ -2,7 +2,7 @@ import { SpeakerWaveIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 const HeaderMenu = () => {
   return (
-    <div className="bg-base-100 h-8 py-1">
+    <div className="bg-base-100 h-8 py-1 hidden">
       <div className="flex justify-between">
         <div className="flex py-2 pl-9">
           <svg

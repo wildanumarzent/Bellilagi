@@ -1,6 +1,30 @@
+import Textfield from '@/components/atoms/input/Textfield';
+import Button from '@/components/atoms/button/button';
+import useAuth from '@/store/auth';
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
 const SignIn = () => {
+  const { Login } = useAuth();
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      password: '',
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email('Invalid email').required('Required'),
+      password: Yup.string().required('Required'),
+    }),
+    onSubmit: (values) => {
+      setTimeout(async () => {
+        await Login(values);
+        formik.setSubmitting(false);
+        formik.resetForm();
+      }, 2000);
+    },
+  });
   return (
-    <div className="bg-white min-h-screen ">
+    <div className="relative bg-white min-h-screen ">
       <div className="flex justify-center items-center pt-5">
         <img
           src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/581fca3a.png"
@@ -14,7 +38,7 @@ const SignIn = () => {
             <div className="flex flex-col justify-center items-center">
               <span className="text-3xl font-bold">Login Sekarang</span>
               <span className="text-gray-500 text-sm">
-                Sudah punya akun Tokopedia? <strong className="text-success">Masuk</strong>
+                Belum punya akun Tokopedia? <strong className="text-success">Daftar</strong>
               </span>
             </div>
             <div>
@@ -23,66 +47,51 @@ const SignIn = () => {
                   <div className="w-full border-t border-gray-200" />
                 </div>
                 <div className="relative flex justify-center text-sm font-normal leading-6">
-                  <span className="bg-white px-6 text-gray-500">atau daftar dengan</span>
+                  <span className="bg-white px-6 text-gray-500">Login dengan</span>
                 </div>
               </div>
             </div>
 
-            <form className="space-y-2" action="#" method="POST">
-              <div className="">
-                <label
-                  htmlFor="email"
-                  className="block text-xs font-medium leading-5 text-gray-600">
-                  Email
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="Masukan Email"
-                    required
-                    className="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="">
-                <label
-                  htmlFor="password"
-                  className="block text-xs font-medium leading-5 text-gray-600">
-                  Password
-                </label>
-                <div className="mt-1">
-                  <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    autoComplete="password"
-                    placeholder="Masukan Password"
-                    required
-                    className="pl-3 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  />
-                </div>
-              </div>
-              <div className="">
-                <button
+            <form className="space-y-2" onSubmit={formik.handleSubmit}>
+              <Textfield
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                error={!!formik.touched.email && !!formik.errors.email}
+                errorText={formik.errors.email}
+                type="text"
+                label="Email"
+                name="email"
+                placeholder="Masukan Email"
+              />
+              <Textfield
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                error={!!formik.touched.password && !!formik.errors.password}
+                errorText={formik.errors.password}
+                type="password"
+                label="Password"
+                name="password"
+                placeholder="Masukan Password"
+              />
+              <div>
+                <Button
                   type="submit"
-                  className="flex mt-10 w-full justify-center rounded-md bg-success px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm ">
-                  Daftar
-                </button>
+                  disabled={formik.isSubmitting}
+                  color="success"
+                  className="flex mt-10 w-full justify-center rounded-md px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm">
+                  Register
+                </Button>
               </div>
               <div className="text-center text-xs text-gray-300">
-                Dengan mendaftar, saya menyetujui <br />
-                <strong className="text-success">Syarat dan Ketentuan</strong> serta Kebijakan{' '}
-                <strong className="text-success">Privasi</strong>
+                Butuh bantuan?
+                <strong className="text-success">Hubungi Tokopedia Care</strong>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div className="relative bottom-2 text-gray-500 text-center text-sm">
-        © 2009-2023, PT Tokopedia <strong className="text-success">Tokopedia Wildan</strong>
+      <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-500 text-center text-sm">
+        © 2009-2023, PT Tokopedia <strong className="text-success">Tokopedia Care</strong>
       </div>
     </div>
   );
