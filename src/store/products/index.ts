@@ -15,7 +15,7 @@ const useProducts = create<ProductsState>((set) => ({
   getProducts: async () => {
     const res = await getProductList();
     set(() => ({
-      products: res.map((product) => {
+      products: res.data.map((product) => {
         return {
           id: product.id,
           title: product.title,
@@ -23,9 +23,9 @@ const useProducts = create<ProductsState>((set) => ({
           special_price: product.special_price,
           image: product.image,
           stock: 0,
-          total_sold: product.sold,
+          total_sold: product.total_sold,
           discount: product.discount,
-          location: product.city,
+          location: product.location,
           ratting: product.ratting,
         };
       }),

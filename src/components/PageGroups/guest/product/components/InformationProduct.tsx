@@ -1,7 +1,7 @@
 import { numberFormat } from '@/utils/format';
 import { MapPinIcon, TruckIcon } from '@heroicons/react/24/outline';
 interface productDetailProps {
-  product: IProductDetail;
+  product?: IProductDetail;
 }
 const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
   return (

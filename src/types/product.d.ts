@@ -24,7 +24,7 @@ interface product {
 }
 
 interface IProductResponse {
-  data: product[];
+  data: IProduct[];
 }
 
 interface IProductDetail {

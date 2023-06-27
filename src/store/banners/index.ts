@@ -17,7 +17,7 @@ const useBannerState = create<IBannerState>((set) => ({
     set(() => ({
       loading: false,
       status: null,
-      banners: banners.map((banner: IBanners) => {
+      banners: banners.data.map((banner) => {
         return {
           image: banner.image,
         };

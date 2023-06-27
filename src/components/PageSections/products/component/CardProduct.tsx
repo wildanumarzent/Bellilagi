@@ -15,7 +15,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <span className="text-xs">{product.title}</span>
         <span className="text-base font-bold">
           {numberFormat({
-            num: product.special_price,
+            num: product?.special_price,
             opt: { style: 'currency' },
           })}
         </span>

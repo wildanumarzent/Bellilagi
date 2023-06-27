@@ -18,7 +18,7 @@ const useCategeries = create<ICategoryState>((set) => ({
   getCategories: async () => {
     const result = await getCategories();
     set(() => ({
-      categories: result.map((category: ICategory) => {
+      categories: result.data.map((category) => {
         return {
           title: category.title,
           image: category.image,
@@ -31,7 +31,7 @@ const useCategeries = create<ICategoryState>((set) => ({
   getIMGCategories: async () => {
     const result = await getImageCategories();
     set(() => ({
-      IMGCategories: result.map((imgcategory: IMGCategory) => {
+      IMGCategories: result.data.map((imgcategory) => {
         return {
           image: imgcategory.image,
         };

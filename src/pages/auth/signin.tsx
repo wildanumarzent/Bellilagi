@@ -1,10 +1,9 @@
-
-import SignIn from "@/components/PageGroups/auth/Signin";
-import { getLayout } from "@/layouts";
+import SignIn from '@/components/PageGroups/auth/SignIn';
+import { getLayout } from '@/layouts';
 
 const Signinpage = () => {
-    return <SignIn />;
-}
+  return <SignIn />;
+};
 
 Signinpage.getLayout = getLayout;
 

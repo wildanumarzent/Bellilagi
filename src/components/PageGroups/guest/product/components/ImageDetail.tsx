@@ -1,5 +1,5 @@
 interface productProps {
-  product: IProductDetail;
+  product?: IProductDetail;
 }
 const ImageDetail: React.FC<productProps> = ({ product }) => {
   return (
