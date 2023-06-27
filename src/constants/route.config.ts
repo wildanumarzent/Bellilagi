@@ -28,6 +28,22 @@ const ROUTE_CONFIG: TypeRouterConfig[] = [
     displayOn: [DisplayOn.MAIN_MENU],
   },
   {
+    id: 'product',
+    title: 'Product',
+    path: '/product',
+    layout: Layout.DEFAULT,
+    displayOn: [DisplayOn.MAIN_MENU],
+    children: [
+      {
+        id: 'product-detail',
+        title: 'Product Detail',
+        path: '/product/7',
+        layout: Layout.FULLSCREEN,
+        displayOn: [DisplayOn.SIDE_MENU, DisplayOn.MAIN_MENU],
+      },
+    ],
+  },
+  {
     id: 'solutions',
     title: 'Solutions',
     path: '/solutions',

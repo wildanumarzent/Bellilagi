@@ -9,7 +9,10 @@ import {
 import Link from 'next/link';
 
 const NavbarWeb = () => {
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, Logout } = useAuth();
+  const handleLogout = () => {
+    alert('mantap dan');
+  };
 
   return (
     <>
@@ -45,18 +48,31 @@ const NavbarWeb = () => {
 
           {isLoggedIn ? (
             <div className="flex md:ml-6 sm:space-x-4 md:space-x-7">
-              <button className="avatar hidden md:flex">
-                <div className="w-[25px] rounded-full ">
-                  <img src="https://images.tokopedia.net/img/cache/215-square/GAnVPX/2021/8/8/08d54322-1166-43af-9302-e50ba3c28fa5.jpg" />
-                </div>
-                <span className="ml-3">skaos_official</span>
-              </button>
-              <button className="avatar">
+              <div className="dropdown">
+                <button tabIndex={0} className="avatar hidden md:flex peer">
+                  <div className="w-[25px] rounded-full ">
+                    <img src="https://images.tokopedia.net/img/cache/215-square/GAnVPX/2021/8/8/08d54322-1166-43af-9302-e50ba3c28fa5.jpg" />
+                  </div>
+                  <span className="ml-3">skaos_official</span>
+                </button>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-32 mt-1">
+                  <li>
+                    <a onClick={(e) => Logout()}>Logout</a>
+                  </li>
+                </ul>
+              </div>
+
+              <button className="avatar peer">
                 <div className="w-[25px] rounded-full ">
                   <img src="https://images.tokopedia.net/img/cache/215-square/GAnVPX/2021/8/8/08d54322-1166-43af-9302-e50ba3c28fa5.jpg" />
                 </div>
                 <span className="ml-3">skaos</span>
               </button>
+              <div className="hidden top-10 mr-96 peer-hover:flex hover:flex absolute w-[100px] flex-col bg-white drop-shadow-lg z-50">
+                <button className="px-3 py-3">Logout</button>
+              </div>
             </div>
           ) : (
             <div className="flex ml-6 gap-2">

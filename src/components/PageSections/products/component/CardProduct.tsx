@@ -9,7 +9,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Link
       href={`product/${product.id}`}
-      className="w-[160px] sm:max-w-[183px] bg-white shadow-xl rounded-lg">
+      className="w-[160px] sm:w-[183px] bg-white shadow-xl rounded-lg">
       <img src={product.image} className="rounded-tl-lg rounded-tr-lg min-w-full" alt="Shoes" />
       <div className="card-body p-5 flex-col">
         <span className="text-xs">{product.title}</span>

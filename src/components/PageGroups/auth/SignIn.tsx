@@ -79,7 +79,7 @@ const SignIn = () => {
                   disabled={formik.isSubmitting}
                   color="success"
                   className="flex mt-10 w-full justify-center rounded-md px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm">
-                  Register
+                  Login
                 </Button>
               </div>
               <div className="text-center text-xs text-gray-300">
