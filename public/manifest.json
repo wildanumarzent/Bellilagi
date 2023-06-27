@@ -1,10 +1,10 @@
 {
-    "name": "GoodNews",
-    "short_name": "GoodNews",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#90cdf4",
-    "theme_color": "#90cdf4",
-    "orientation": "portrait-primary",
-    "icons": []
+  "name": "Tokopedia",
+  "short_name": "Tokopedia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#90cdf4",
+  "theme_color": "#90cdf4",
+  "orientation": "portrait-primary",
+  "icons": []
 }

@@ -10,9 +10,6 @@ import Link from 'next/link';
 
 const NavbarWeb = () => {
   const { isLoggedIn, Logout } = useAuth();
-  const handleLogout = () => {
-    alert('mantap dan');
-  };
 
   return (
     <>
