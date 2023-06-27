@@ -87,7 +87,7 @@ const NavbarWeb = () => {
       </div>
 
       <div className="xl:flex justify-between -mt-5 hidden">
-        <div className="text-[12px] flex justify-end left-[370px] relative">
+        <div className="text-[12px] flex justify-end left-[320px] relative">
           <ul className="flex space-x-5 py-2">
             <li>
               <Link href={'#'}>Harman Kardon</Link>

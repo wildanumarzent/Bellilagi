@@ -2,9 +2,9 @@ import { SpeakerWaveIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 const HeaderMenu = () => {
   return (
-    <div className="bg-base-100 h-8 py-1 hidden">
+    <div className="bg-[#F0F3F7] h-8 py-1 hidden xl:block">
       <div className="flex justify-between">
-        <div className="flex py-2 pl-9">
+        <div className="flex py-1 pl-20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -22,7 +22,7 @@ const HeaderMenu = () => {
         </div>
 
         <div className="text-[12px] pr-5">
-          <ul className="flex space-x-5 py-2">
+          <ul className="flex space-x-5 py-1">
             <li>
               <Link href={'#'}>Tentang Tokopedia</Link>
             </li>
