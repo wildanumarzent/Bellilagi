@@ -30,7 +30,7 @@ const BannerContent = () => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper">
+        className="mySwiper rounded-xl">
         {banners.map((banner) => (
           <SwiperSlide>
             <img className="rounded-xl" src={banner.image} alt="" />
