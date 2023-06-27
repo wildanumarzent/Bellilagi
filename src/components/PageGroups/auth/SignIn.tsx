@@ -3,6 +3,7 @@ import Button from '@/components/atoms/button/button';
 import useAuth from '@/store/auth';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
+import Link from 'next/link';
 
 const SignIn = () => {
   const { Login } = useAuth();
@@ -38,7 +39,10 @@ const SignIn = () => {
             <div className="flex flex-col justify-center items-center">
               <span className="text-3xl font-bold">Login Sekarang</span>
               <span className="text-gray-500 text-sm">
-                Belum punya akun Tokopedia? <strong className="text-success">Daftar</strong>
+                Belum punya akun Tokopedia?{' '}
+                <Link href={'/auth/signup'} className="text-success">
+                  Daftar
+                </Link>
               </span>
             </div>
             <div>

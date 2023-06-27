@@ -22,7 +22,7 @@ const BannerContent = () => {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 250,
+          delay: 2250,
           disableOnInteraction: false,
         }}
         pagination={{

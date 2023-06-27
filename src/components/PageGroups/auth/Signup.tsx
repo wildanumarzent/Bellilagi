@@ -4,6 +4,7 @@ import useAuth from '@/store/auth';
 import { useFormik } from 'formik';
 import { useState } from 'react';
 import * as Yup from 'yup';
+import Link from 'next/link';
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
@@ -48,7 +49,10 @@ const Signup = () => {
             <div className="flex flex-col justify-center items-center">
               <span className="text-3xl font-bold">Daftar Sekarang</span>
               <span className="text-gray-500 text-sm">
-                Sudah punya akun Tokopedia? <strong className="text-success">Masuk</strong>
+                Sudah punya akun Tokopedia?{' '}
+                <Link href={'/auth/signin'} className="text-success">
+                  Masuk
+                </Link>
               </span>
             </div>
             <div>

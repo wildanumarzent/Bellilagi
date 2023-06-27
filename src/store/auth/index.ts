@@ -54,6 +54,8 @@ export const useAuthStore = create<AuthState>()(
           isLoggedIn: false,
         }));
         sessionStorage.clear();
+        const url_login = encodeURI(`${window.location.origin}/auth/signin`);
+        window.location.replace(url_login);
       },
     }),
     {
