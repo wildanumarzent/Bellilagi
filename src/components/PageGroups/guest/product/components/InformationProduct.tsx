@@ -143,13 +143,61 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
             <div className="flex">
               <div className="space-x-1">
                 kurir lainnya : <div className="badge badge-ghost">Instan</div>
-                <div className="badge badge-ghost font-bold">COD</div>
+                <div className="badge badge-ghost">COD</div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <hr className="my-5" />
+      <div className="flex flex-col gap-y-3">
+        <p className="text-black font-bold">Penawaran Lainnya</p>
+        <div className="flex gap-3">
+          <div>
+            <img
+              src="https://images.tokopedia.net/pdp/info/icon/pdp-paylatercicilan@3x.png"
+              className="w-[24px]"
+              alt="PAYLATER"
+            />
+          </div>
+
+          <div className="text-black font-bold flex flex-col">
+            Paylater & Cicilan
+            <span className="text-sm font-normal">
+              Beli sekarang, bayar akhir bulan atau 30 hari lagi
+            </span>
+          </div>
+        </div>
+      </div>
+      <hr className="my-5" />
+      <div className="flex flex-col gap-y-3">
+        <p className="text-black font-bold">Beli di aplikasi, makin banyak promo!</p>
+        <div className="flex justify-between gap-3">
+          <div className="flex">
+            <div className="text-success">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-[24px] h-[24px]">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"
+                />
+              </svg>
+            </div>
+            <span className="text-sm font-normal">
+              Scan QR-nya untuk lihat barang ini di aplikasi Tokopedia. Bebas ongkir, lho~
+            </span>
+          </div>
+          <div className="border border-1 text-xs text-gray-500 w-32 h-8 lg:h-0 flex justify-center items-center rounded-lg font-bold">
+            Scan QR
+          </div>
+        </div>
+      </div>
     </>
   );
 };

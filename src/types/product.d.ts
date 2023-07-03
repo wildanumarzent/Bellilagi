@@ -1,5 +1,5 @@
 interface IProduct {
-  id: number;
+  id: string;
   title: string;
   price: number;
   special_price: number;
@@ -24,7 +24,7 @@ interface product {
 }
 
 interface IProductResponse {
-  data: IProduct[];
+  data: product[];
 }
 
 interface IProductDetail {
@@ -39,6 +39,8 @@ interface IProductDetail {
   city: string;
   variant_color: VariantColor[];
   variant_size: VariantSize[];
+  user_reviews: UserReview[];
+  content_reviews: ContentReview[];
   description: string;
   id: string;
 }
@@ -56,4 +58,17 @@ interface VariantColor {
 interface VariantSize {
   id: number;
   title: string;
+}
+
+interface UserReview {
+  rating: number;
+  rating_at: string;
+  avatar: string;
+  name: string;
+  comment: string;
+  variasi: string;
+}
+
+interface ContentReview {
+  photo: string;
 }

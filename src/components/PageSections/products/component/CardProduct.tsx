@@ -6,6 +6,7 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+  console.log(product);
   return (
     <Link
       href={`product/${product.id}`}

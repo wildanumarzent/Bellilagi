@@ -14,19 +14,20 @@ const useProducts = create<ProductsState>((set) => ({
   status: null,
   getProducts: async () => {
     const res = await getProductList();
+
     set(() => ({
       products: res.data.map((product) => {
         return {
           id: product.id,
           title: product.title,
-          price: product.price,
-          special_price: product.special_price,
+          price: parseInt(product.price),
+          special_price: parseInt(product.special_price),
           image: product.image,
           stock: 0,
-          total_sold: product.total_sold,
-          discount: product.discount,
-          location: product.location,
-          ratting: product.ratting,
+          total_sold: product.sold,
+          discount: parseInt(product.discount),
+          location: product.city,
+          ratting: parseInt(product.ratting),
         };
       }),
       loading: false,
