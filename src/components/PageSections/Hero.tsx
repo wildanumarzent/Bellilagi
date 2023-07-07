@@ -33,7 +33,7 @@ const BannerContent = () => {
         className="mySwiper rounded-xl">
         {banners.map((banner) => (
           <SwiperSlide>
-            <img className="rounded-xl" src={banner.image} alt="" />
+            <img className="rounded-xl w-auto" src={banner.image} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>

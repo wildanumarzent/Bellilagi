@@ -18,7 +18,7 @@ module.exports = {
       {
         tokopedia: {
           primary: '#2583BA',
-          secondary: '#B0B0B0',
+          secondary: '#F94D63',
           accent: '#97d159',
           neutral: '#262438',
           'base-100': '#FFFFFF',

@@ -1,26 +1,17 @@
+import ProductCard from '@/components/PageSections/products/component/CardProduct';
+import useProducts from '@/store/products';
+
 const BaseOnSearch = () => {
+  const { products, getProducts } = useProducts();
   return (
-    <div className="carousel rounded-box">
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Burger" />
-      </div>
-      <div className="carousel-item">
-        <img src="/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Burger" />
+    <div className="py-3">
+      <span className="text-black font-bold text-2xl">Berdasarkan pencarianmu</span>
+      <div className="carousel rounded-box gap-3 mt-5">
+        {products.map((product) => (
+          <div className="carousel-item rounded-none mb-3">
+            <ProductCard key={product.id} product={product} />
+          </div>
+        ))}
       </div>
     </div>
   );
