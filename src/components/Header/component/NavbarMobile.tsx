@@ -27,7 +27,7 @@ const NavbarMobile = () => {
         </div>
       </div>
       <div className="flex-none">
-        <div className="flex justify-between gap-3 mr-5">
+        <div className="flex justify-between gap-1 mr-3 ml-2">
           <ShoppingCartIcon className="w-5" />
           <BellIcon className="w-5" />
           <EnvelopeIcon className="w-5" />
