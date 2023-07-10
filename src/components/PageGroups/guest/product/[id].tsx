@@ -16,7 +16,6 @@ const DetailProduct = () => {
   useEffect(() => {
     getProduct(String(id));
   }, []);
-  console.log(product);
 
   return (
     <div className="mx-auto max-w-7xl lg:px-10 lg:py-5 bg-white">

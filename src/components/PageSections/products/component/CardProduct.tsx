@@ -41,7 +41,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="flex">
           <div className="rating rating-xs flex">
             <input type="radio" name="rating-5" className="mask mask-star-2 bg-yellow-400 mr-1" />
-            <span className="text-xs font-bold text-gray-400 mr-1">{product.ratting} | </span>
+            <span className="text-xs font-bold text-gray-400 mr-1">{product.rating} | </span>
           </div>
           <div className="text-xs text-gray-500"> Terjual {product.total_sold}K</div>
         </div>

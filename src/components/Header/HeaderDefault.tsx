@@ -3,7 +3,7 @@ import NavbarWeb from './component/NavbarDekstop';
 const HeaderDefault = () => {
   return (
     <>
-      <div className="bg-white sm:px-5 sm:py-2 shadow-md z-50 w-auto">
+      <div className="bg-white sm:px-5 sm:py-2 shadow-md z-50  w-full">
         <NavbarWeb />
         <NavbarMobile />
       </div>

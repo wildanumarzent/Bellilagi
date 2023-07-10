@@ -1,4 +1,4 @@
-import create from 'zustand';
+import { create } from 'zustand';
 import { getProductList } from './actions';
 
 interface ProductsState {
@@ -14,7 +14,6 @@ const useProducts = create<ProductsState>((set) => ({
   status: null,
   getProducts: async () => {
     const res = await getProductList();
-
     set(() => ({
       products: res.data.map((product) => {
         return {
@@ -27,7 +26,7 @@ const useProducts = create<ProductsState>((set) => ({
           total_sold: product.sold,
           discount: parseInt(product.discount),
           location: product.city,
-          ratting: parseInt(product.ratting),
+          rating: parseInt(product.ratting),
         };
       }),
       loading: false,

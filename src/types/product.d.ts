@@ -8,7 +8,7 @@ interface IProduct {
   total_sold: number;
   discount: number;
   location: string;
-  ratting: number;
+  rating: number;
 }
 
 interface product {
@@ -28,11 +28,12 @@ interface IProductResponse {
 }
 
 interface IProductDetail {
+  id: string;
   title: string;
   image: string;
   sold?: number;
-  rating: number;
-  total_rating: number;
+  ratting: number;
+  total_ratting: number;
   price: number;
   special_price: number;
   discount: number;
@@ -42,7 +43,6 @@ interface IProductDetail {
   user_reviews: UserReview[];
   content_reviews: ContentReview[];
   description: string;
-  id: string;
 }
 
 interface ProductDetailResponse {
@@ -50,13 +50,13 @@ interface ProductDetailResponse {
 }
 
 interface VariantColor {
-  id: number;
+  id?: number;
   title: string;
   image: string;
 }
 
 interface VariantSize {
-  id: number;
+  id?: number;
   title: string;
 }
 

@@ -1,9 +1,12 @@
 import { numberFormat } from '@/utils/format';
 import { MapPinIcon, TruckIcon } from '@heroicons/react/24/outline';
+import useProduct from '@/store/products/detail';
 interface productDetailProps {
   product?: IProductDetail;
 }
 const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
+  const { selectedColor, changeColor } = useProduct();
+
   return (
     <>
       <span className="text-xl lg:text-2xl font-bold">{product?.title}</span>
@@ -12,7 +15,9 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
         <span className="font-bold text-lg -mt-2 mx-2">.</span>
         <div className="rating rating-sm flex mb-4">
           <input type="radio" name="rating-5" className="mask mask-star-2 bg-yellow-400 mr-1" />
-          <span className="text-sm font-bold text-gray-400 mr-1"> 4.6 {'( 96 rating )'} </span>
+          <span className="text-sm font-bold text-gray-400 mr-1">
+            {product?.ratting} {`( ${product?.total_ratting} rating )`}
+          </span>
         </div>
       </div>
       <div className="flex flex-col">
@@ -38,7 +43,7 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
       <div className="flex flex-col">
         <div className="variant-color">
           <div className="font-bold text-black mb-3">
-            Pilih warna : <span className="text-gray-400">PUTIH</span>
+            Pilih warna : <span className="text-gray-400">{selectedColor?.title}</span>
           </div>
           <ul className="flex gap-2">
             {product?.variant_color.map((color) => (
@@ -47,7 +52,8 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
                   type="radio"
                   id={color.title}
                   name="variant_color"
-                  defaultValue="variant-color"
+                  value={JSON.stringify(color)}
+                  onChange={(e) => changeColor(e.target.value)}
                   className="hidden peer hover:text-success"
                 />
                 <label
