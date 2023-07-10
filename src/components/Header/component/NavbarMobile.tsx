@@ -28,12 +28,12 @@ const NavbarMobile = () => {
       </div>
       <div className="flex-none">
         <div className="flex justify-between gap-3 mr-5">
-          <ShoppingCartIcon className="w-6" />
-          <BellIcon className="w-6" />
-          <EnvelopeIcon className="w-6" />
+          <ShoppingCartIcon className="w-5" />
+          <BellIcon className="w-5" />
+          <EnvelopeIcon className="w-5" />
         </div>
         <button className="btn btn-xs btn-square btn-ghost">
-          <Bars4Icon className="w-6" />
+          <Bars4Icon className="w-5" />
         </button>
       </div>
     </div>
