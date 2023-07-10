@@ -5,7 +5,7 @@ interface productDetailProps {
   product?: IProductDetail;
 }
 const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
-  const { selectedColor, changeColor } = useProduct();
+  const { selectedColor, changeColor, selectedSize, changeSize } = useProduct();
 
   return (
     <>
@@ -68,7 +68,7 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
         </div>
         <div className="variant-size mt-5">
           <div className="font-bold text-black mb-3">
-            Pilih ukuran : <span className="text-gray-400">M</span>
+            Pilih ukuran : <span className="text-gray-400">{selectedSize?.title}</span>
           </div>
           <ul className="flex gap-2">
             {product?.variant_size.map((size) => (
@@ -76,8 +76,9 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
                 <input
                   type="radio"
                   id={size.title}
+                  value={JSON.stringify(size)}
+                  onChange={(e) => changeSize(e.target.value)}
                   name="variant_size"
-                  defaultValue="variant-size"
                   className="hidden peer hover:text-success"
                 />
                 <label

@@ -7,10 +7,10 @@ interface ProductState {
   loading: boolean;
   status: 'SUCCESS' | 'FAILURE' | null;
   selectedColor?: VariantColor | null;
-  selectedSize?: VariantSize;
+  selectedSize?: VariantSize | null;
   getProduct: (id: string) => void;
   changeColor: (params: string) => void;
-  changeSize: () => void;
+  changeSize: (params: string) => void;
 }
 
 const useProduct = create<ProductState>((set, get) => ({
@@ -18,10 +18,9 @@ const useProduct = create<ProductState>((set, get) => ({
   loading: false,
   status: null,
   selectedColor: null,
+  selectedSize: null,
   getProduct: async (id: string) => {
     const product = await getProduct(id);
-    console.log(product);
-
     set(() => ({
       product: product.data,
       loading: false,
@@ -30,14 +29,22 @@ const useProduct = create<ProductState>((set, get) => ({
   },
   changeColor: (params) => {
     const changDataColor = JSON.parse(params);
-    set((state: any) => {
+    set((state) => {
       return {
         selectedColor: changDataColor,
-        product: { ...state.product, title: `${state.product?.title} - ${changDataColor?.title}` },
+        // product: { ...state.product, title: `${state.product?.title} - ${changDataColor?.title}` },
       };
     });
   },
-  changeSize: () => {},
+  changeSize: (params) => {
+    const changeDataSize = JSON.parse(params);
+    set((state) => {
+      return {
+        selectedSize: changeDataSize,
+        // product: { ...state.product, title: `${state.product?.title} - ${changDataColor?.title}` },
+      };
+    });
+  },
 }));
 
 export default useProduct;

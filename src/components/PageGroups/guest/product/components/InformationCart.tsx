@@ -1,15 +1,15 @@
 import CounterInputForm from '@/components/atoms/form/CounterForm';
+import useProduct from '@/store/products/detail';
 const CartInformation = () => {
+  const { selectedColor, selectedSize } = useProduct();
   return (
     <div className="border mx-10 px-3 rounded-lg py-3">
       <span className="font-bold text-base">Atur jumlah dan catatan</span>
       <div className="flex py-5 gap-2">
-        <img
-          src="https://images.tokopedia.net/img/cache/500-square/VqbcmM/2023/1/28/25928872-a05c-4a56-a900-b6de25fd3f40.jpg.webp?ect=4g"
-          className="w-10 rounded-lg"
-          alt=""
-        />
-        <span className="text-black mt-2">Putih, L</span>
+        <img src={selectedColor?.image} className="w-10 rounded-lg" alt="" />
+        <span className="text-black mt-2">
+          {selectedColor?.title}, {selectedSize?.title}
+        </span>
       </div>
 
       <hr />
