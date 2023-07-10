@@ -39,11 +39,10 @@ const useProduct = create<ProductState>((set, get) => ({
   },
   changeColor: (params) => {
     const changeDataColor = JSON.parse(params);
-
-    set((state) => {
+    set((state: any) => {
       return {
         selectedColor: changeDataColor,
-        // product: { ...state.product, title: `${state.product?.title} - ${changDataColor?.title}` },
+        product: { ...state.product, image: changeDataColor?.image },
       };
     });
   },
