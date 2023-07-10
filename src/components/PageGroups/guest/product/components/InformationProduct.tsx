@@ -1,6 +1,7 @@
 import { numberFormat } from '@/utils/format';
 import { MapPinIcon, TruckIcon } from '@heroicons/react/24/outline';
 import useProduct from '@/store/products/detail';
+import { useEffect } from 'react';
 interface productDetailProps {
   product?: IProductDetail;
 }
@@ -53,6 +54,7 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
                   id={color.title}
                   name="variant_color"
                   value={JSON.stringify(color)}
+                  checked={color.id === selectedColor?.id}
                   onChange={(e) => changeColor(e.target.value)}
                   className="hidden peer hover:text-success"
                 />
@@ -77,6 +79,7 @@ const InformationProduct: React.FC<productDetailProps> = ({ product }) => {
                   type="radio"
                   id={size.title}
                   value={JSON.stringify(size)}
+                  checked={size.id === selectedSize?.id}
                   onChange={(e) => changeSize(e.target.value)}
                   name="variant_size"
                   className="hidden peer hover:text-success"

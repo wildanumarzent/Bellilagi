@@ -21,17 +21,28 @@ const useProduct = create<ProductState>((set, get) => ({
   selectedSize: null,
   getProduct: async (id: string) => {
     const product = await getProduct(id);
-    set(() => ({
-      product: product.data,
-      loading: false,
-      status: 'SUCCESS',
-    }));
+    set(() => {
+      let defaultVariantColor = product.data.variant_color;
+      let findIndex = defaultVariantColor.findIndex((item) => String(item.id) == id);
+
+      let defaultVariantSize = product.data.variant_size;
+      let findIndexSize = defaultVariantSize.findIndex((item) => String(item.id) == id);
+
+      return {
+        product: product.data,
+        selectedColor: defaultVariantColor[findIndex],
+        selectedSize: defaultVariantSize[findIndexSize],
+        loading: false,
+        status: 'SUCCESS',
+      };
+    });
   },
   changeColor: (params) => {
-    const changDataColor = JSON.parse(params);
+    const changeDataColor = JSON.parse(params);
+
     set((state) => {
       return {
-        selectedColor: changDataColor,
+        selectedColor: changeDataColor,
         // product: { ...state.product, title: `${state.product?.title} - ${changDataColor?.title}` },
       };
     });
