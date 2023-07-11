@@ -41,9 +41,9 @@ const useCategeries = create<ICategoryState>((set) => ({
             image: imgcategory.image,
           };
         }),
+        loading: false,
       }));
-    }, 1000);
-    set(() => ({ loading: false }));
+    }, 2000);
   },
 }));
 

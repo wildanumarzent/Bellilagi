@@ -1,7 +1,7 @@
 import ProductCard from '@/components/PageSections/products/component/CardProduct';
+import ProductSkeleton from '@/components/atoms/skeleton/ProductSkeleton';
 import useProducts from '@/store/products';
 import { useEffect } from 'react';
-import ProductSkeleton from '@/components/atoms/skeleton/ProductSkeleton';
 
 const ProductList = () => {
   const { loading, products, getProducts } = useProducts();

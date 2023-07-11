@@ -1,13 +1,15 @@
 import CardDiscount from '../products/component/CardDiscount';
 import useProducts from '@/store/products';
 import clsx from 'clsx';
-import CraouselDiscountSkeleton from '@/components/atoms/skeleton/CraouselSkeleton';
+import BaseDiscountSkeleton from '@/components/atoms/skeleton/BaseDiscountSkeleton';
 
 const BaseOnDiscount = () => {
   const { loading, products, getProducts } = useProducts();
+  if (loading) {
+    return <BaseDiscountSkeleton />;
+  }
   return (
     <>
-      {loading ? <CraouselDiscountSkeleton /> : <></>}
       <div className="py-3 hidden sm:block">
         <div className="flex">
           <div className="text-black font-bold text-2xl">
