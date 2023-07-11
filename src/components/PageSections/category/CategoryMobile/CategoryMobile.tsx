@@ -13,16 +13,16 @@ const CategoryMobile = () => {
     <div className="card bg-base-0 border-0 p-0 mt-2 text-base-300 sm:hidden">
       <div className="card-body p-0 flex flex-col">
         <div className="carousel rounded-box gap-3">
-          {categories.map((categories) => (
-            <Categories categories={categories} />
+          {categories.map((categories, key) => (
+            <Categories key={key} categories={categories} />
           ))}
         </div>
         <div className="my-3">
           <BannerContent />
         </div>
         <div className="carousel rounded-box gap-3">
-          {categories.reverse().map((services) => (
-            <Services services={services} />
+          {categories.reverse().map((services, key) => (
+            <Services key={key} services={services} />
           ))}
         </div>
       </div>

@@ -13,16 +13,19 @@ const useBannerState = create<IBannerState>((set) => ({
   loading: false,
   status: null,
   getBanners: async () => {
+    set(() => ({ loading: true }));
     const banners = await getBanners();
-    set(() => ({
-      loading: false,
-      status: null,
-      banners: banners.data.map((banner) => {
-        return {
-          image: banner.image,
-        };
-      }),
-    }));
+    setTimeout(() => {
+      set(() => ({
+        banners: banners.data.map((banner) => {
+          return {
+            image: banner.image,
+          };
+        }),
+        loading: false,
+        status: null,
+      }));
+    }, 2000);
   },
 }));
 

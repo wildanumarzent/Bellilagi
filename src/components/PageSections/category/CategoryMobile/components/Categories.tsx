@@ -3,8 +3,6 @@ interface categories {
   categories?: ICategory;
 }
 const Categories: React.FC<categories> = ({ categories }) => {
-  console.log('test', categories);
-
   return (
     <div>
       <div className="carousel-item">

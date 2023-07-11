@@ -16,27 +16,34 @@ const useCategeries = create<ICategoryState>((set) => ({
   loading: false,
   status: null,
   getCategories: async () => {
+    set(() => ({ loading: true }));
     const result = await getCategories();
-    set(() => ({
-      categories: result.data.map((category) => {
-        return {
-          title: category.title,
-          image: category.image,
-        };
-      }),
-      loading: false,
-      status: null,
-    }));
+    setTimeout(() => {
+      set(() => ({
+        categories: result.data.map((category) => {
+          return {
+            title: category.title,
+            image: category.image,
+          };
+        }),
+        loading: false,
+        status: null,
+      }));
+    }, 2000);
   },
   getIMGCategories: async () => {
+    set(() => ({ loading: true }));
     const result = await getImageCategories();
-    set(() => ({
-      IMGCategories: result.data.map((imgcategory) => {
-        return {
-          image: imgcategory.image,
-        };
-      }),
-    }));
+    setTimeout(() => {
+      set(() => ({
+        IMGCategories: result.data.map((imgcategory) => {
+          return {
+            image: imgcategory.image,
+          };
+        }),
+      }));
+    }, 1000);
+    set(() => ({ loading: false }));
   },
 }));
 
