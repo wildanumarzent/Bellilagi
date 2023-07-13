@@ -28,28 +28,18 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
   const useThemeState = useTheme((state) => state);
   const [show, setShow] = useState(false);
 
-  // Google Anlaytics
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      /* invoke analytics function only for production */
-      if (isProduction) pageview(url);
-    };
-    router.events.on('routeChangeComplete', handleRouteChange);
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [isProduction, router.events]);
-
   // theme
   useEffect(() => {
     themeChange(false);
-  }, []);
+  }, [useThemeState]);
 
   useEffect(() => {
     const theme = storage.getTheme();
-    useThemeState.setTheme(theme ?? '');
+
+    useThemeState.setTheme(theme ?? 'light');
     themeChange(false);
     setTimeout(() => {
+      useThemeState.setTheme(theme ?? 'light');
       setShow(true);
     }, 4000);
     // eslint-disable-next-line react-hooks/exhaustive-deps

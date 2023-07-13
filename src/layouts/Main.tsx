@@ -13,7 +13,7 @@ export const Main = ({ children }: PagePropsWithChildren) => {
     <div className="flex flex-col transition-colors duration-150">
       <HeaderMenu />
       <Header />
-      <div className="min-h-screen bg-white">{children}</div>
+      <div className="min-h-screen bg-base-100">{children}</div>
       <Footer />
     </div>
   );

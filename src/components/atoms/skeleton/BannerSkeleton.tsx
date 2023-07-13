@@ -2,9 +2,9 @@ const BannerSkeleton = () => {
   return (
     <div
       role="status"
-      className="flex items-center justify-center h-56 w-full bg-gray-300 rounded-lg animate-pulse dark:bg-base-100">
+      className="flex items-center justify-center h-56 w-full bg-base-100 rounded-lg animate-pulse dark:bg-base-100">
       <svg
-        className="w-full h-10 text-gray-200 dark:text-gray-500"
+        className="w-full h-10 text-base-300 dark:text-base-300"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         fill="currentColor"

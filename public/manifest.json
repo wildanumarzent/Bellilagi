@@ -1,6 +1,6 @@
 {
-  "name": "Tokopedia",
-  "short_name": "Tokopedia",
+  "name": "Meteor - Web Boilerplate",
+  "short_name": "MeteorNextJs",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#90cdf4",

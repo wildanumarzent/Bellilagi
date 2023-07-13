@@ -9,8 +9,8 @@ const SignIn = () => {
   const { Login } = useAuth();
   const formik = useFormik({
     initialValues: {
-      email: '',
-      password: '',
+      email: 'eve.holt@reqres.in',
+      password: 'cityslicka',
     },
     validationSchema: Yup.object({
       email: Yup.string().email('Invalid email').required('Required'),

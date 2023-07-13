@@ -10,7 +10,7 @@ const ProductSkeleton = () => {
         <BannerSkeleton />
         <div className="flex flex-wrap justify-center sm:justify-start gap-5 py-9">
           {_.times(12, (i) => (
-            <CardSkeleton />
+            <CardSkeleton key={i} />
           ))}
         </div>
       </div>

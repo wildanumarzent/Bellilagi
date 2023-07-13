@@ -7,7 +7,7 @@ const CategorySkeleton = () => {
         <div className="flex gap-3">
           <div className="flex space-x-5 mt-3">
             {_.times(4, (i) => (
-              <div className="card w-36 border hover:border-success">
+              <div className="card w-36 border hover:border-success" key={i}>
                 <svg
                   className="w-full h-20 text-gray-200 dark:text-bg-base-100"
                   aria-hidden="true"

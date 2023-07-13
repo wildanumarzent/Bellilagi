@@ -21,7 +21,7 @@ const BaseDiscountSkeleton = () => {
         </div>
         <div className="carousel rounded-box gap-3 -ml-32 p-3">
           {_.times(12, (i) => (
-            <CardSkeleton />
+            <CardSkeleton key={i} />
           ))}
         </div>
       </div>

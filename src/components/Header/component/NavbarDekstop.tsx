@@ -1,3 +1,4 @@
+import ThemeChanger from '@/components/DaisyUI/ThemeChanger';
 import useAuth from '@/store/auth';
 import {
   BellIcon,
@@ -6,14 +7,14 @@ import {
   MapPinIcon,
   ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 import Link from 'next/link';
-
 const NavbarWeb = () => {
   const { isLoggedIn, Logout } = useAuth();
 
   return (
     <>
-      <div className="hidden sm:flex navbar flex-col relative">
+      <div className="hidden sm:flex navbar flex-col relative text-secondary">
         <div className="flex">
           <div className="mr-5 hidden sm:flex">
             <img
@@ -22,7 +23,7 @@ const NavbarWeb = () => {
             />
           </div>
           <div className="hidden sm:flex">Kategori</div>
-          <div className="relative text-gray-600 focus-within:text-gray-400 ml-5">
+          <div className="relative text-neutral ml-5">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
                 <MagnifyingGlassIcon className="w-6" />
@@ -31,7 +32,7 @@ const NavbarWeb = () => {
             <input
               type="search"
               name="q"
-              className="py-2 hidden sm:flex text-sm text-base-200 bg-white rounded-md pl-10 input input-sm input-bordered input-black hover:input-success lg:w-[400px] xl:w-[600px] 2xl:w-[700px]"
+              className="py-2 hidden sm:flex text-sm bg-white text-neutral rounded-md pl-10 input input-sm input-bordered input-black hover:input-success lg:w-[400px] xl:w-[600px] 2xl:w-[700px]"
               placeholder="Cari Barang Disini..."
               autoComplete="off"
             />
@@ -42,7 +43,9 @@ const NavbarWeb = () => {
             <EnvelopeIcon className="w-5" />
           </div>
           <div className="h-6 text-base-100">|</div>
-
+          <div className="ml-4">
+            <ThemeChanger />
+          </div>
           {isLoggedIn ? (
             <div className="flex md:ml-6 sm:space-x-4 md:space-x-7">
               <div className="dropdown">
@@ -67,7 +70,7 @@ const NavbarWeb = () => {
                 </div>
                 <span className="ml-3">skaos</span>
               </button>
-              <div className="hidden top-10 mr-96 peer-hover:flex hover:flex absolute w-[100px] flex-col bg-white drop-shadow-lg z-50">
+              <div className="hidden top-10 mr-96 peer-hover:flex hover:flex absolute w-[100px] flex-col bg-base-100 drop-shadow-lg z-50">
                 <button className="px-3 py-3">Logout</button>
               </div>
             </div>
@@ -75,10 +78,10 @@ const NavbarWeb = () => {
             <div className="flex ml-6 gap-2">
               <Link
                 href={'auth/signin'}
-                className="btn btn-sm btn-outline btn-success text-xs hover:text-white">
+                className="btn btn-sm btn-outline btn-success text-xs hover:text-base-100">
                 Login
               </Link>
-              <Link href={'auth/signup'} className="btn btn-sm btn-success text-white text-xs ">
+              <Link href={'auth/signup'} className="btn btn-sm btn-success text-base-100 text-xs ">
                 Daftar
               </Link>
             </div>
@@ -86,8 +89,8 @@ const NavbarWeb = () => {
         </div>
       </div>
 
-      <div className="xl:flex justify-between -mt-5 hidden">
-        <div className="text-[12px] flex justify-end left-[320px] relative">
+      <div className="xl:flex justify-between -mt-5 hidden text-secondary">
+        <div className={clsx(`text-[12px] flex justify-end left-[320px] relative`)}>
           <ul className="flex space-x-5 py-2">
             <li>
               <Link href={'#'}>Harman Kardon</Link>
