@@ -23,7 +23,6 @@ type AppPropsWithLayout = AppProps & {
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
   const router = useRouter();
-  const isProduction = process.env.NODE_ENV === 'production';
 
   const useThemeState = useTheme((state) => state);
   const [show, setShow] = useState(false);
@@ -35,11 +34,13 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
 
   useEffect(() => {
     const theme = storage.getTheme();
+    console.log('test');
 
     useThemeState.setTheme(theme ?? 'light');
+    console.log(useThemeState);
+
     themeChange(false);
     setTimeout(() => {
-      useThemeState.setTheme(theme ?? 'light');
       setShow(true);
     }, 4000);
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -26,13 +26,13 @@ const SignIn = () => {
   });
   return (
     <div className="relative bg-white min-h-screen ">
-      <div className="flex justify-center items-center pt-5">
+      <Link href={'/'} className="flex justify-center items-center pt-5">
         <img
           src="https://assets.tokopedia.net/assets-tokopedia-lite/v2/zeus/kratos/581fca3a.png"
           className="w-[160px] h-[34px]"
           alt=""
         />
-      </div>
+      </Link>
       <div className="flex justify-center items-center py-16">
         <div className="mt-3 w-[400px] shadow-lg">
           <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">

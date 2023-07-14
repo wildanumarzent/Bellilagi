@@ -25,7 +25,7 @@ const Splashscreen = () => {
             <div className="text-success mt-[10px] mb-10">
               {/* <span className="font-extrabold text-[20px]">please wait...</span> */}
             </div>
-            {/* <Lottie options={defaultOptions} height={400} width={400} /> */}
+            <Lottie options={defaultOptions} height={400} width={400} />
 
             {/* if using lottie online */}
             {/* <Player

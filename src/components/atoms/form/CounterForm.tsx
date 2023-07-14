@@ -10,7 +10,7 @@ const CounterForm = () => {
         <input
           type="text"
           value={1}
-          className="w-full text-center text-gray-700 rounded  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          className="w-full text-center bg-base-100 text-gray-700 rounded  leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         />
         <button>
           <PlusIcon className="h-4 w-4 text-success" aria-hidden="true" />

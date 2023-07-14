@@ -9,7 +9,7 @@ const BaseDiscountSkeleton = () => {
         <div className="h-2.5 bg-base-100 rounded-full dark:bg-base-100 w-72 mb-4" />
       </div>
       <div className="flex relative">
-        <div className="bg-base-200 w-[calc(24% - 6px)] pl-10 pr-40 rounded-lg ">
+        <div className="bg-base-100 w-[calc(24% - 6px)] pl-10 pr-40 rounded-lg ">
           <svg
             className="w-[280px] h-[320px] text-gray-200 dark:text-bg-base-100"
             aria-hidden="true"

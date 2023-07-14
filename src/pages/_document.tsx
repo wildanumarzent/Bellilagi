@@ -11,7 +11,7 @@ export default class CustomDocument extends Document {
   render() {
     const dir = getDirection();
     return (
-      <Html data-theme={'Meteor'}>
+      <Html data-theme={process.env.NEXT_PUBLIC_THEME ?? 'Meteor'}>
         <Head>
           <link
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=optional"

@@ -7,7 +7,7 @@ const ServiceSkeleton = () => {
         <div className="carousel-item">
           <div className="border p-3 w-auto rounded-full">
             <div className="flex gap-3 w-auto">
-              {/* {_.times(7, (i) => (
+              {_.times(7, (i) => (
                 <>
                   <div className="" key={i}>
                     <svg
@@ -21,7 +21,7 @@ const ServiceSkeleton = () => {
                     <div className="h-2 mt-1 flex justify-center items-center bg-gray-200 rounded-full dark:bg-base-100 w-32 "></div>
                   </div>
                 </>
-              ))} */}
+              ))}
             </div>
           </div>
         </div>

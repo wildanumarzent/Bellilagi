@@ -78,10 +78,10 @@ const NavbarWeb = () => {
             <div className="flex ml-6 gap-2">
               <Link
                 href={'auth/signin'}
-                className="btn btn-sm btn-outline btn-success text-xs hover:text-base-100">
+                className="btn btn-sm btn-outline btn-accent text-xs hover:text-base-100">
                 Login
               </Link>
-              <Link href={'auth/signup'} className="btn btn-sm btn-success text-base-100 text-xs ">
+              <Link href={'auth/signup'} className="btn btn-sm btn-accent text-info text-xs ">
                 Daftar
               </Link>
             </div>
