@@ -49,13 +49,13 @@ export const useAuthStore = create<AuthState>()(
         }
       },
       Logout: () => {
+        sessionStorage.clear();
+        const url_login = encodeURI(`${window.location.origin}/auth/signin`);
+        window.location.replace(url_login);
         set(() => ({
           token: '',
           isLoggedIn: false,
         }));
-        sessionStorage.clear();
-        const url_login = encodeURI(`${window.location.origin}/auth/signin`);
-        window.location.replace(url_login);
       },
     }),
     {

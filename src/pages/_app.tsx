@@ -34,10 +34,7 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
 
   useEffect(() => {
     const theme = storage.getTheme();
-    console.log('test');
-
     useThemeState.setTheme(theme ?? 'light');
-    console.log(useThemeState);
 
     themeChange(false);
     setTimeout(() => {

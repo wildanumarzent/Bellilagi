@@ -9,20 +9,20 @@ import {
 } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import Link from 'next/link';
+import useThemeStore from '@/store/theme';
+
 const NavbarWeb = () => {
   const { isLoggedIn, Logout } = useAuth();
+  const { logo } = useThemeStore();
 
   return (
     <>
       <div className="hidden sm:flex navbar flex-col relative text-secondary">
         <div className="flex">
           <div className="mr-5 hidden sm:flex">
-            <img
-              src="https://ecs7.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg"
-              alt=""
-            />
+            <img src={logo} className="w-[162px] h-full" alt="logo" />
           </div>
-          <div className="hidden sm:flex">Kategori</div>
+          {/* <div className="hidden sm:flex">Kategori</div> */}
           <div className="relative text-neutral ml-5">
             <span className="absolute inset-y-0 left-0 flex items-center pl-2">
               <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
@@ -89,8 +89,8 @@ const NavbarWeb = () => {
         </div>
       </div>
 
-      <div className="xl:flex justify-between -mt-5 hidden text-secondary">
-        <div className={clsx(`text-[12px] flex justify-end left-[320px] relative`)}>
+      {/* <div className="xl:flex justify-between -mt-5 hidden text-secondary">
+        <div className={clsx(`text-[12px] flex justify-end left-[310px] relative`)}>
           <ul className="flex space-x-5 py-2">
             <li>
               <Link href={'#'}>Harman Kardon</Link>
@@ -118,7 +118,7 @@ const NavbarWeb = () => {
             <span className="">Dikirim ke kos wildan</span>
           </div>
         )}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,6 +1,17 @@
 import themes from '@/constants/localdata/theme';
+import useThemeStore from '@/store/theme';
+import storage from '@/utils/storage';
 
 const ThemeChanger = () => {
+  const useThemeState = useThemeStore((state) => state);
+
+  const setThemesColor = (themes: string) => {
+    localStorage.setItem('theme', themes);
+    let theme = storage.getTheme();
+
+    useThemeState.setTheme(theme ?? 'light');
+  };
+
   return (
     <div title="Change Theme" className="dropdown dropdown-end">
       <div tabIndex={0} className="normal-case gap-2 cursor-pointer hover:text-secondary">
@@ -22,6 +33,7 @@ const ThemeChanger = () => {
                 key={theme.id}
                 className="outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2"
                 data-set-theme={theme?.id}
+                onClick={(e) => setThemesColor(theme?.id)}
                 data-act-class="outline">
                 <div
                   data-theme={theme.id}
