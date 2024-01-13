@@ -8,7 +8,7 @@ const Services: React.FC<Service> = ({ services }) => {
       <div className="carousel-item">
         <div className="flex flex-col justify-center items-center">
           <img src={services?.image} alt="" className="w-[24px] mb-2" />
-          <span className="text-xs text-center w-16">{services?.title}</span>
+          <span className="text-xs text-center text-gray-500 w-16">{services?.title}</span>
         </div>
       </div>
     </div>

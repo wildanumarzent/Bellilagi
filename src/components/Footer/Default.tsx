@@ -76,10 +76,10 @@ const FooterDefault = () => {
       </h2>
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 ">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="grid grid-cols-2 gap-8 xl:col-span-2">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="flex justify-center">
+            {/* <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-sm font-bold text-black tracking-wider uppercase">Tokopedia</h3>
+                <h3 className="text-sm font-bold text-black tracking-wider uppercase">Bellilagi</h3>
                 <ul role="list" className="mt-4 space-y-1">
                   {navigation.tokopedia.map((item) => (
                     <li key={item.name}>
@@ -102,7 +102,7 @@ const FooterDefault = () => {
                   ))}
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="text-sm font-bold text-black tracking-wider uppercase mb-2">
@@ -119,11 +119,11 @@ const FooterDefault = () => {
               </div>
             </div>
           </div>
-          <div className="mt-8 xl:mt-0 flex flex-col space-y-3">
-            <div>
-              <img src="https://images.tokopedia.net/img/unify/il_footer_hd_v2.png" alt="" />
+          <div className="xl:mt-0 flex flex-col">
+            <div className="flex justify-center">
+              <img src="/logo_bellilagi.jpeg" alt="" />
             </div>
-            <div className="flex gap-3 mb-3">
+            {/* <div className="flex gap-3 mb-3">
               <a href="">
                 <img
                   src="https://assets.tokopedia.net/asts/assets-unify/img/icon-download-android.svg"
@@ -142,9 +142,9 @@ const FooterDefault = () => {
                   alt=""
                 />
               </a>
-            </div>
-            <div className="flex justify-center items-center text-gray-500 font-bold text-sm mt-5">
-              &copy; 2009 - 2023, PT. Tokopedia.
+            </div> */}
+            <div className="flex justify-center items-center text-gray-500 font-bold text-sm">
+              &copy; 2003 - 2024, PT. Rotasi Galaksi Teknologi.
             </div>
           </div>
         </div>

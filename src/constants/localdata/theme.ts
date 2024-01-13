@@ -5,6 +5,11 @@ const theme = [
     actClass: 'outline',
   },
   {
+    id: 'Belilagi',
+    baseTheme: 'dark',
+    actClass: 'outline',
+  },
+  {
     id: 'Tokopedia',
     baseTheme: 'dark',
     actClass: 'outline',

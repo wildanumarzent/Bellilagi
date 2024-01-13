@@ -10,7 +10,7 @@ const BaseOnSearch = () => {
   return (
     <>
       <div className="py-3">
-        <span className="text-black font-bold text-2xl">Berdasarkan pencarianmu</span>
+        <span className="font-semibold text-2xl text-gray-500">Yang paling banyak dicari</span>
         <div className="carousel rounded-box gap-3 mt-5">
           {products.map((product) => (
             <div className="carousel-item rounded-none mb-3" key={product.id}>
