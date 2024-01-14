@@ -25,7 +25,7 @@ const NavbarMobile = () => {
   },[debounceSearch])
   
   return (
-    <div className="fixed navbar bg-white sm:hidden">
+    <div className="fixed shadow-md navbar bg-white sm:hidden">
       <div className="flex-none"></div>
       <div className="flex-1">
         <div className="relative text-gray-600 focus-within:text-gray-400 mr-3 w-full">

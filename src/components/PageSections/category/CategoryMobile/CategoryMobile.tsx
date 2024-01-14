@@ -12,7 +12,7 @@ const CategoryMobile = () => {
   }, []);
   
   return (
-    <div className="card bg-base-0 border-0 p-0 mt-2 text-base-300 sm:hidden">
+    <div className="card bg-base-0 border-0 p-0 mt-24 text-base-300 sm:hidden">
       <div className="card-body p-0 flex flex-col">
         <div className="carousel rounded-box gap-3">
           {categories.map((categories, key) => (
