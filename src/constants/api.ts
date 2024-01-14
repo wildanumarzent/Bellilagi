@@ -1,5 +1,5 @@
 // LIST PRODUCT
-export const API_GET_PRODUCTS = '/product/list';
+export const API_GET_PRODUCTS = '/product/list?search=';
 export const API_GET_PRODUCT_CATEGORIES = '/product/category/';
 
 export const API_GET_CATEGORIES_FASHION = '/categories/fashion/list';

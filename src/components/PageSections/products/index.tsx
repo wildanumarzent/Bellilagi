@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 const ProductList = () => {
   const { loading, products, getProducts } = useProducts();
   useEffect(() => {
-    getProducts();
+    getProducts("");
   }, []);
   if (loading) {
     return <ProductSkeleton />;
@@ -18,9 +18,20 @@ const ProductList = () => {
         alt=""
       />
       <div className="flex flex-wrap justify-center sm:justify-start gap-5 py-9">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+       {products?.length == 0 ? 
+          <>
+            <div className="flex flex-col justify-center items-center mt-10">
+              <img src="/empty_box.jpeg" className="w-24" alt="Image" />
+              <span>Product Kosong</span>
+            </div>
+          </> 
+          : 
+          <>
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+          </>}
+
       </div>
     </>
   );

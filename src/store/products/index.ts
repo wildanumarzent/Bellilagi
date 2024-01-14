@@ -5,16 +5,19 @@ interface ProductsState {
   products: IProduct[];
   loading: boolean;
   status?: 'SUCCESS' | 'FAILURE' | null;
-  getProducts: () => void;
+  valueSearch:string;
+  getProducts: (search:string) => void;
 }
 
 const useProducts = create<ProductsState>((set) => ({
   products: [],
   loading: false,
   status: null,
-  getProducts: async () => {
+  valueSearch:'',
+  getProducts: async (search) => {
     set(() => ({ loading: true }));
-    const res = await getProductList();
+    set(() => ({ valueSearch: search }));
+    const res = await getProductList(search);
     set(() => ({
       products: res.data.map((product) => {
         return {

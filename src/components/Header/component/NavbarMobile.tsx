@@ -6,8 +6,24 @@ import {
   ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import useProducts from '@/store/products';
+import useProductByCategories from '@/store/products/byCategories';
+import { useRouter } from 'next/router';
+import useDebounce from '@/hooks/useDebounce';
 
 const NavbarMobile = () => {
+  const router = useRouter();
+  const id = router.query.id;
+  const [search, setSearch] = useState('')
+  const debounceSearch = useDebounce<string>(search, 500)
+
+  const {getProducts} = useProducts();
+  const {getSearch, getProduct} = useProductByCategories();
+  useEffect(() => {
+    getProducts(debounceSearch)
+  },[debounceSearch])
+  
   return (
     <div className="navbar bg-white sm:hidden">
       <div className="flex-none"></div>
@@ -21,6 +37,7 @@ const NavbarMobile = () => {
           <input
             type="text"
             name="q"
+            onChange={(e) => setSearch(e.target.value)}
             className="text-sm text-black bg-white rounded-md pl-10 input input-md input-bordered input-black hover:input-success w-full"
             placeholder="Search product"
             autoComplete="on"

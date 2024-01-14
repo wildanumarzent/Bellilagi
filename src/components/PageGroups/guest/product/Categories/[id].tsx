@@ -11,9 +11,9 @@ const ProductByCategories = () => {
   const router = useRouter();
   const id = router.query.id;
   
-    const { loading, productCategories, getProduct } = useProductByCategories();
+    const { loading, productCategories ,getProduct } = useProductByCategories();
     useEffect(() => {
-      getProduct(Number(id));
+      getProduct(Number(id),'');
     }, [id]);
     if (loading) {
       return <ProductSkeleton />;
