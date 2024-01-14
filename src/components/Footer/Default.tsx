@@ -144,7 +144,7 @@ const FooterDefault = () => {
               </a>
             </div> */}
             <div className="flex justify-center items-center text-gray-500 font-bold text-sm">
-              &copy; 2003 - 2024, PT. Rotasi Galaksi Teknologi.
+              &copy; 2003 - 2025, Bellilagi.id
             </div>
           </div>
         </div>
