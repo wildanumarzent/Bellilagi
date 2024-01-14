@@ -3,6 +3,9 @@ import { getLayout } from '@/layouts';
 
 const Detail = () => {
   return <ProductByCategories />;
+      {/* <Analytics/> */}
+    
+  
 };
 
 Detail.getLayout = getLayout;

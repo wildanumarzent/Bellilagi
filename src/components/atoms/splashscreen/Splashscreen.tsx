@@ -1,16 +1,17 @@
-import { Player } from '@lottiefiles/react-lottie-player';
-import Lottie from 'react-lottie';
-import animationData from '../../../../public/assets/lottie/online-shopping.json';
+// import { Player } from '@lottiefiles/react-lottie-player';
+// import Lottie from 'react-lottie';
+// import { Player, Controls } from '@lottiefiles/react-lottie-player';
+// import animationData from '../../../../public/assets/lottie/online-shopping.json';
 
 const Splashscreen = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: 'xMidYMid slice',
+  //   },
+  // };
   return (
     <>
       <div className=" bg-white bg-repeat-y bg-cover bg-content-home relative py-20 h-screen flex flex-col items-center justify-center">
@@ -22,10 +23,18 @@ const Splashscreen = () => {
               className="w-52"
             />
 
-            <div className="text-success mb-24">
+            {/* <div className="text-success mb-24"> */}
+            {/* <Player
+              autoplay
+              loop
+              src="https://assets3.lottiefiles.com/packages/lf20_UJNc2t.json"
+              style={{ height: '300px', width: '300px' }}
+            >
+              <Controls visible={true} buttons={['play', 'repeat', 'frame', 'debug']} />
+            </Player> */}
               {/* <span className="font-extrabold text-[20px]">please wait...</span> */}
-            <Lottie options={defaultOptions} height={400} width={400} />
-            </div>
+            {/* <Lottie options={defaultOptions} height={400} width={400} /> */}
+            {/* </div> */}
 
             {/* if using lottie online */}
             {/* <Player
@@ -35,7 +44,7 @@ const Splashscreen = () => {
               autoplay
               speed={1}
             /> */}
-            {/* <div role="loading mt-8">
+            <div role="loading ">
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-white"
@@ -52,9 +61,9 @@ const Splashscreen = () => {
                 />
               </svg>
               <span className="sr-only">Loading...</span>
-            </div> */}
+            </div>
 
-            <footer className="text-white absolute bottom-0 py-8">
+            {/* <footer className="text-white absolute bottom-0 py-8">
               <div className="mx-auto max-w-7xl overflow-hidden flex flex-col justify-center items-center">
                 <span className="text-center text-[8px] font-medium leading-5 text-success">
                   Powered by
@@ -67,7 +76,7 @@ const Splashscreen = () => {
                   />
                 </div>
               </div>
-            </footer>
+            </footer> */}
           </div>
         </div>
       </div>
