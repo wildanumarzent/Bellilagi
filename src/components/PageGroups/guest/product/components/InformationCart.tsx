@@ -1,5 +1,5 @@
 import CounterInputForm from '@/components/atoms/form/CounterForm';
-import useProduct from '@/store/products/detail';
+import useProduct from '@/store/products/byCategories';
 const CartInformation = () => {
   const { selectedColor, selectedSize } = useProduct();
   return (

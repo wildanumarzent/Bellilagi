@@ -1,16 +1,20 @@
-interface ICategory {
-  image: string;
-  title: string;
+interface ICategories {
+  id: number
+  type: string
+  name: string
+  icon: string
+  category_icon_path: string
+}
+
+interface ICategory{
+  id:number;
+  title:string;
+  image:string;
 }
 
 interface CategoryResponse {
-  data: ICategory[];
+  data: ICategories[];
 }
 
-interface IMGCategory {
-  image: string;
-}
 
-interface IMGCategoryResponse {
-  data: IMGCategory[];
-}
+

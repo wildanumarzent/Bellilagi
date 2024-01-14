@@ -1,6 +1,6 @@
 import { numberFormat } from '@/utils/format';
 import { MapPinIcon, TruckIcon } from '@heroicons/react/24/outline';
-import useProduct from '@/store/products/detail';
+import useProduct from '@/store/products/byCategories';
 import { useEffect } from 'react';
 interface productDetailProps {
   product?: IProductDetail;

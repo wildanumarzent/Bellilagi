@@ -1,22 +1,22 @@
 import { create } from 'zustand';
-import { getProductList } from './actions';
+import { getProductByCategories } from './actions';
 
-interface ProductsState {
-  products: IProduct[];
+interface ProductState {
+  productCategories?: IProduct[];
   loading: boolean;
-  status?: 'SUCCESS' | 'FAILURE' | null;
-  getProducts: () => void;
+  status: 'SUCCESS' | 'FAILURE' | null;
+  getProduct: (id: number) => void;
 }
 
-const useProducts = create<ProductsState>((set) => ({
-  products: [],
+const useProductByCategories = create<ProductState>((set, get) => ({
+  productCategories: [],
   loading: false,
   status: null,
-  getProducts: async () => {
+  getProduct: async (id:number) => {
     set(() => ({ loading: true }));
-    const res = await getProductList();
+    const res = await getProductByCategories(id);
     set(() => ({
-      products: res.data.map((product) => {
+      productCategories: res.data.map((product) => {
         return {
           id: product.id,
           title: product.name,
@@ -32,6 +32,7 @@ const useProducts = create<ProductsState>((set) => ({
       status: null,
     }));
   },
+  
 }));
 
-export default useProducts;
+export default useProductByCategories;

@@ -8,7 +8,7 @@ const ServiceSkeleton = () => {
           <div className="border p-3 w-auto rounded-full">
             <div className="flex gap-3 w-auto">
               {_.times(7, (i) => (
-                <>
+                // <>
                   <div className="" key={i}>
                     <svg
                       className="w-5 h-5 text-gray-200 dark:text-base-100"
@@ -20,7 +20,7 @@ const ServiceSkeleton = () => {
                     </svg>
                     <div className="h-2 mt-1 flex justify-center items-center bg-gray-200 rounded-full dark:bg-base-100 w-32 "></div>
                   </div>
-                </>
+                // </>
               ))}
             </div>
           </div>

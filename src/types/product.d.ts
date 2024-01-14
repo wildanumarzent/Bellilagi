@@ -1,74 +1,35 @@
+interface ProductRoot {
+  id: number
+  category_id: number
+  name: string
+  link_affiliate: string
+  image: string
+  address: string
+  rating: number
+  total_terjual: string
+  no_product: string
+  created_at: string
+  updated_at: string
+  product_image_path: string
+}
+
 interface IProduct {
-  id: string;
+  id: number;
   title: string;
-  price: number;
-  special_price: number;
   image: string;
-  stock: number;
-  total_sold: number;
-  discount: number;
+  total_sold: string;
+  no_product:string;
+  link_affiliate:string;
   location: string;
   rating: number;
 }
 
-interface product {
-  title: string;
-  price: string;
-  discount: string;
-  special_price: string;
-  city: string;
-  ratting: string;
-  sold: number;
-  image: string;
-  id: string;
-}
-
 interface IProductResponse {
-  data: product[];
-}
-
-interface IProductDetail {
-  id: string;
-  title: string;
-  image: string;
-  sold?: number;
-  ratting: number;
-  total_ratting: number;
-  price: number;
-  special_price: number;
-  discount: number;
-  city: string;
-  variant_color: VariantColor[];
-  variant_size: VariantSize[];
-  user_reviews: UserReview[];
-  content_reviews: ContentReview[];
-  description: string;
+  data: ProductRoot[];
 }
 
 interface ProductDetailResponse {
-  data: IProductDetail;
+  data: ProductRoot[];
 }
 
-interface VariantColor {
-  id?: number;
-  title: string;
-  image: string;
-}
 
-interface VariantSize {
-  id?: number;
-  title: string;
-}
-
-interface UserReview {
-  rating: number;
-  rating_at: string;
-  avatar: string;
-  name: string;
-  comment: string;
-  variasi: string;
-}
-
-interface ContentReview {
-  photo: string;
-}

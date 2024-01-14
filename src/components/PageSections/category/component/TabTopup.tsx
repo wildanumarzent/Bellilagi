@@ -3,10 +3,10 @@ import TopupSkeleton from '@/components/atoms/skeleton/TopupSkeleton';
 import useCategeries from '@/store/categories';
 
 const TabTopup = () => {
-  const { loading, getIMGCategories } = useCategeries();
+  const { loading, getOtherCategories } = useCategeries();
 
   useEffect(() => {
-    getIMGCategories();
+    getOtherCategories();
   }, []);
   if (loading) {
     return <TopupSkeleton />;

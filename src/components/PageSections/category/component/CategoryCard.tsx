@@ -2,10 +2,10 @@ import useCategeries from '@/store/categories';
 import { useEffect } from 'react';
 import CategorySkeleton from '@/components/atoms/skeleton/CategorySkeleton';
 const CategoryCard = () => {
-  const { loading, IMGCategories, getIMGCategories } = useCategeries();
+  const { loading, OtherCategories, getOtherCategories } = useCategeries();
 
   useEffect(() => {
-    getIMGCategories();
+    getOtherCategories();
   }, []);
   if (loading) {
     return <CategorySkeleton />;
@@ -14,9 +14,9 @@ const CategoryCard = () => {
     <>
       <div className="p-5">
         <span className="text-3xl">Kategori Pilihan</span>
-        {IMGCategories.length && (
+        {OtherCategories.length && (
           <div className="flex gap-3">
-            {IMGCategories.map((category, key) => (
+            {OtherCategories.map((category, key) => (
               <div className="flex space-x-5 mt-3" key={key}>
                 <div className="card w-36 border hover:border-success">
                   <img src={category.image} className="w-32" alt="" />

@@ -1,11 +1,11 @@
-import Home from '@/components/PageGroups/Home';
-import DetailProduct from '@/components/PageGroups/guest/product/[id]';
-import { getLayout } from '@/layouts';
+// import Home from '@/components/PageGroups/Home';
+// import DetailProduct from '@/components/PageGroups/guest/product/[id]';
+// import { getLayout } from '@/layouts';
 
-const Detail = () => {
-  return <DetailProduct />;
-};
+// const Detail = () => {
+//   return <DetailProduct />;
+// };
 
-Detail.getLayout = getLayout;
+// Detail.getLayout = getLayout;
 
-export default Detail;
+// export default Detail;

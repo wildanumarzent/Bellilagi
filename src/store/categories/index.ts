@@ -1,18 +1,18 @@
 import { create } from 'zustand';
-import { getCategories, getImageCategories } from './actions';
+import { getCategories, getOtherCategories } from './actions';
 
 interface ICategoryState {
   categories: ICategory[];
-  IMGCategories: IMGCategory[];
+  OtherCategories: ICategory[];
   loading: boolean;
   status: 'SUCCESS' | 'FAILURE' | null;
   getCategories: () => void;
-  getIMGCategories: () => void;
+  getOtherCategories: () => void;
 }
 
 const useCategeries = create<ICategoryState>((set) => ({
   categories: [],
-  IMGCategories: [],
+  OtherCategories: [],
   loading: false,
   status: null,
   getCategories: async () => {
@@ -22,8 +22,9 @@ const useCategeries = create<ICategoryState>((set) => ({
       set(() => ({
         categories: result.data.map((category) => {
           return {
-            title: category.title,
-            image: category.image,
+            id:category.id,
+            title: category.name,
+            image: category.category_icon_path,
           };
         }),
         loading: false,
@@ -31,14 +32,16 @@ const useCategeries = create<ICategoryState>((set) => ({
       }));
     }, 2000);
   },
-  getIMGCategories: async () => {
+  getOtherCategories: async () => {
     set(() => ({ loading: true }));
-    const result = await getImageCategories();
+    const result = await getOtherCategories();
     setTimeout(() => {
       set(() => ({
-        IMGCategories: result.data.map((imgcategory) => {
+        OtherCategories: result.data.map((otherCategories) => {
           return {
-            image: imgcategory.image,
+            id:otherCategories.id,
+            title: otherCategories.name,
+            image: otherCategories.category_icon_path,
           };
         }),
         loading: false,

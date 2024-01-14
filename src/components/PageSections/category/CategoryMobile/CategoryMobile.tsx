@@ -5,10 +5,12 @@ import Services from './components/Services';
 import Categories from './components/Categories';
 
 const CategoryMobile = () => {
-  const { categories, getCategories } = useCategeries();
+  const { categories, OtherCategories, getCategories, getOtherCategories } = useCategeries();
   useEffect(() => {
     getCategories();
+    getOtherCategories()
   }, []);
+  
   return (
     <div className="card bg-base-0 border-0 p-0 mt-2 text-base-300 sm:hidden">
       <div className="card-body p-0 flex flex-col">
@@ -21,8 +23,8 @@ const CategoryMobile = () => {
           <BannerContent />
         </div>
         <div className="carousel rounded-box gap-3">
-          {categories.reverse().map((services, key) => (
-            <Services key={key} services={services} />
+        {OtherCategories.map((otherCategories, key) => (
+            <Categories key={key} categories={otherCategories} />
           ))}
         </div>
       </div>

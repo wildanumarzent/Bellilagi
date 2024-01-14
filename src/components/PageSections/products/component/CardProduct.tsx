@@ -8,10 +8,11 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   return (
     <Link
-      href={`product/${product.id}`}
+      href={product.link_affiliate}
+      target='blank'
       className="w-[160px] sm:w-[183px] bg-white shadow-xl rounded-lg">
       <img src={product.image} className="rounded-tl-lg rounded-tr-lg min-w-full" alt="Shoes" />
-      <div className="card-body p-5 flex-col">
+      <div className="card-body p-3 flex-col">
         <span className="text-xs">{product.title}</span>
         {/* <span className="text-base font-bold">
           {numberFormat({
@@ -33,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         <div className="flex">
           <img
             className="w-4 h-4"
-            src="https://images.tokopedia.net/img/official_store/badge_os.png"
+            src="/location_red.png"
             alt=""
           />
           <span className="text-xs">{product.location}</span>
@@ -43,10 +44,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <input type="radio" name="rating-5" className="mask mask-star-2 bg-yellow-400 mr-1" />
             <span className="text-xs font-bold text-gray-400 mr-1">{product.rating} | </span>
           </div>
-          <div className="text-xs text-gray-500"> Terjual {product.total_sold}K</div>
+          <div className="text-xs text-gray-500"> Terjual {product.total_sold}</div>
         </div>
-        <div className="bg-pink-200 text-[0.714286rem] text-red-500 font-bold w-fit h-[23px] p-1 rounded-md">
-         No : {product.discount}
+        <div className="bg-pink-200 text-[0.714286rem] text-red-500 font-bold w-fit h-[24px] p-1 rounded-md">
+         Code : {product.no_product}
           </div>
       </div>
     </Link>

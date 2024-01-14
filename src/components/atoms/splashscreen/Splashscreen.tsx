@@ -17,15 +17,15 @@ const Splashscreen = () => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
             <img
-              src="https://ecs7.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg"
+              src="/logo_belilagi.jpg"
               alt={'logo'}
-              className="w-72"
+              className="w-52"
             />
 
-            <div className="text-success mt-[10px] mb-10">
+            <div className="text-success mb-24">
               {/* <span className="font-extrabold text-[20px]">please wait...</span> */}
-            </div>
             <Lottie options={defaultOptions} height={400} width={400} />
+            </div>
 
             {/* if using lottie online */}
             {/* <Player
@@ -35,7 +35,7 @@ const Splashscreen = () => {
               autoplay
               speed={1}
             /> */}
-            <div role="loading mt-8">
+            {/* <div role="loading mt-8">
               <svg
                 aria-hidden="true"
                 className="w-5 h-5 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-white"
@@ -52,16 +52,16 @@ const Splashscreen = () => {
                 />
               </svg>
               <span className="sr-only">Loading...</span>
-            </div>
+            </div> */}
 
             <footer className="text-white absolute bottom-0 py-8">
               <div className="mx-auto max-w-7xl overflow-hidden flex flex-col justify-center items-center">
                 <span className="text-center text-[8px] font-medium leading-5 text-success">
                   Powered by
                 </span>
-                <div className="mt-[5px]">
+                <div className="">
                   <img
-                    src="https://ecs7.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg"
+                    src="/logo_bellilagi.jpeg"
                     className="w-[69px]"
                     alt=""
                   />

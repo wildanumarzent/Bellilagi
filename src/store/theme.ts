@@ -19,10 +19,10 @@ const useThemeStore = create<ThemeState>((set) => ({
       let img = '';
       if (val === 'Shopee') {
         img = 'assets/img/logo-shopee.png';
-      } else if (val === 'Tokopedia') {
-        img = 'https://ecs7.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg';
+      } else if (val === 'Belilagi') {
+        img = '/logo_belilagi.jpg';
       } else {
-        img = 'assets/img/logo-meteor.png';
+        img = '/logo_belilagi.jpg';
       }
       return {
         theme: val,

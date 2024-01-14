@@ -5,6 +5,7 @@ import {
   MagnifyingGlassIcon,
   ShoppingCartIcon,
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 const NavbarMobile = () => {
   return (
@@ -32,9 +33,9 @@ const NavbarMobile = () => {
           <BellIcon className="w-5" />
           <EnvelopeIcon className="w-5" />
         </div> */}
-        <div className="w-20">
+        <Link href={'/'} className="w-20">
           <img src="/logo_bellilagi.jpeg" alt="" />
-        </div>
+        </Link>
       </div>
     </div>
   );
