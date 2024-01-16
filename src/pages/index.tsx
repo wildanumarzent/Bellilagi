@@ -1,9 +1,14 @@
 import Home from '@/components/PageGroups/Home';
 import { getLayout } from '@/layouts';
-// import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react';
 
 const Homepage = () => {
-  return <Home />
+  return (
+    <>
+    <Home />
+    <Analytics />
+    </>
+  )
 };
 
 Homepage.getLayout = getLayout;
