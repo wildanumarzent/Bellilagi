@@ -15,6 +15,7 @@ import { pageview } from '@/utils/gtag';
 import storage from '@/utils/storage';
 import useTheme from '@/store/theme';
 import Splashscreen from '@/components/atoms/splashscreen/Splashscreen';
+import { Analytics } from '@vercel/analytics/react';
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
@@ -66,6 +67,7 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
             pauseOnHover
             theme="colored"
           />
+          <Analytics />
         </>
       )}
     </>

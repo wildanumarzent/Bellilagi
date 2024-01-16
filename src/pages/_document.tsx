@@ -1,5 +1,5 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
-import { Analytics } from '@vercel/analytics/react';
+
 
 function getDirection() {
   return 'ltr';
@@ -23,7 +23,7 @@ export default class CustomDocument extends Document {
         <body dir={dir}>
           <Main />
           <NextScript />
-          <Analytics />
+          
         </body>
       </Html>
     );
