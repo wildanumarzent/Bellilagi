@@ -54,7 +54,14 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
         <Splashscreen />
       ) : (
         <>
-          {getLayout(<Component {...pageProps} />)}
+          {
+            getLayout(
+            <>
+            <Component {...pageProps} />
+            <Analytics />
+            </>
+            )
+          }
           <ToastContainer
             position="top-center"
             autoClose={5000}
@@ -67,7 +74,7 @@ function CustomApp({ Component, pageProps: { session, ...pageProps } }: AppProps
             pauseOnHover
             theme="colored"
           />
-          <Analytics />
+          
         </>
       )}
     </>
